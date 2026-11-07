@@ -21,7 +21,7 @@ This file is written for people and for AI coding agents. It lives in the root o
 8. SVG icons only. No Font Awesome and no jQuery.
 9. **Lighthouse mobile: Performance 98+ and Accessibility, Best Practices and SEO all 100 on every page.**
 10. Accessibility meets **WCAG 2.2 Level AA**.
-11. Every page has a unique title, meta description, canonical URL, one `h1` and Open Graph tags.
+11. Every page has a unique title (**50 characters or fewer, never over 60**), meta description, canonical URL, one `h1` and Open Graph tags.
 12. Never put API keys, passwords, or secrets in front-end code or in the repo.
 13. Reviews, testimonials, stats, and credentials must be real. Never invent them.
 14. Every site has a **back-to-top button** fixed to the bottom-right corner (Section 4).
@@ -370,11 +370,11 @@ Reference: CodeStitch Page Speed Handbook, https://codestitch.app/page-speed-han
 ```html
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Move-Out Cleaning in San Diego | Barry's Pro Cleaning</title>
+<title>Move-Out Cleaning San Diego | Barry's Pro Cleaning</title>
 <meta name="description" content="Flat-rate move-out cleaning across San Diego County. Deposit-ready kitchens, baths and floors. Get your free quote today.">
 <link rel="canonical" href="https://domain.com/services/move-out-cleaning/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Move-Out Cleaning in San Diego | Barry's Pro Cleaning">
+<meta property="og:title" content="Move-Out Cleaning San Diego | Barry's Pro Cleaning">
 <meta property="og:description" content="Flat-rate move-out cleaning across San Diego County.">
 <meta property="og:url" content="https://domain.com/services/move-out-cleaning/">
 <meta property="og:image" content="https://domain.com/images/brand/og-image.jpg">
@@ -387,7 +387,11 @@ Reference: CodeStitch Page Speed Handbook, https://codestitch.app/page-speed-han
 ```
 
 ### On-page rules
-- **Title:** unique, about 50–60 characters, built as *main keyword + location | Brand*. The brand comes last, except on the homepage.
+- **Title:** unique to the page, built as *main keyword + location | Brand*. The brand comes last, except on the homepage.
+  - **Aim for 50 characters or fewer. 60 is the hard limit.** Google cuts titles off at about 60 characters, and preview/meta-tag checkers flag anything longer.
+  - Count the title as it displays: `&amp;` counts as one character (`&`), and spaces and the `|` separator count too.
+  - If it runs long, shorten the keyword part first (drop "in", "and", filler words) and keep the brand name whole.
+  - The `og:title` (link previews) follows the same limit and can differ from the page title.
 - **Meta description:** unique, about 140–160 characters, with a benefit and a call to action. It doesn't affect ranking directly, but it wins clicks.
 - **One `h1`** per page containing the main keyword. Below it, use `h2` and `h3` in order.
 - **One main topic per page.**
@@ -591,7 +595,7 @@ MigsFlow builds the front end. Forms get sent to an outside service, so there is
 - [ ] axe/WAVE reports zero errors, and the VoiceOver pass is done.
 
 **SEO**
-- [ ] Unique title, description, canonical, Open Graph and one `h1` on every page.
+- [ ] Unique title (50 characters or fewer, 60 max), description, canonical, Open Graph and one `h1` on every page.
 - [ ] LocalBusiness schema validated. Favicon set, OG image, `robots.txt`, `sitemap.xml` and `404.html` in place.
 - [ ] Redirects added for old URLs, and no broken links.
 
