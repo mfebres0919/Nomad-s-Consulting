@@ -1021,10 +1021,139 @@ p {
     }
 }
 
+/* ---------- Smooth scrolling (Lenis) ---------- */
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+    overflow: clip;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-smooth iframe {
+    pointer-events: none;
+}
+
+/* ---------- Fade-ins ----------
+   Only when JavaScript is running (.js on <html>), so content is never
+   hidden without it. Fades use filter: opacity() rather than opacity so
+   accessibility scanners still see the text, and movement uses the
+   individual translate / scale properties so it never fights an
+   element's own transform. Directions: up, down, left, right, zoom. */
+.js [data-reveal] {
+    filter: opacity(0);
+    transition:
+        filter 2.2s ease,
+        translate 2.2s var(--ease-out),
+        scale 2.2s var(--ease-out);
+    transition-delay: calc(var(--reveal-step, 0) * 180ms);
+}
+
+.js [data-reveal="up"] { translate: 0 2.5rem; }
+.js [data-reveal="down"] { translate: 0 -2rem; }
+.js [data-reveal="left"] { translate: -3rem 0; }
+.js [data-reveal="right"] { translate: 3rem 0; }
+.js [data-reveal="zoom"] { scale: 0.88; }
+
+.js [data-reveal-delay="1"] { --reveal-step: 1; }
+.js [data-reveal-delay="2"] { --reveal-step: 2; }
+.js [data-reveal-delay="3"] { --reveal-step: 3; }
+.js [data-reveal-delay="4"] { --reveal-step: 4; }
+
+.js [data-reveal].is-revealed {
+    filter: none;
+    translate: none;
+    scale: none;
+}
+
+/* Photos fade up gently as they finish loading */
+.js img[data-src],
+.js img.is-pending {
+    filter: opacity(0);
+}
+
+.js img.is-loaded {
+    transition: filter 1.4s ease;
+}
+
+/* ---------- Hand-drawn underline ---------- */
+.scribble-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+.scribble {
+    position: absolute;
+    left: -2%;
+    bottom: -0.12em;
+    width: 104%;
+    height: 0.28em;
+    overflow: visible;
+    pointer-events: none;
+}
+
+.scribble path {
+    fill: none;
+    stroke: var(--mustard);
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 0;
+}
+
+/* Draws itself once its heading has faded in */
+.js .scribble path {
+    stroke-dashoffset: 1;
+    transition: stroke-dashoffset 1.6s var(--ease-out) 1.4s;
+}
+
+.js .is-revealed .scribble path {
+    stroke-dashoffset: 0;
+}
+
+/* ---------- Botanicals: leaves and flowers peeking in at the edges ---------- */
+.botanicals {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.botanical {
+    position: absolute;
+    height: auto;
+    animation: leafSway 7s ease-in-out infinite alternate;
+}
+
+@keyframes leafSway {
+    from { rotate: calc(var(--leaf-tilt, 0deg) - 3deg); }
+    to { rotate: calc(var(--leaf-tilt, 0deg) + 3deg); }
+}
+
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
+    }
+
+    .js [data-reveal] {
+        filter: none;
+        translate: none;
+        scale: none;
+    }
+
+    .js .scribble path {
+        stroke-dashoffset: 0;
+    }
+
+    .botanical {
+        animation: none;
     }
 
     *,

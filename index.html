@@ -6,6 +6,20 @@
     <title>Gap Year, Sabbatical &amp; Relocation Planning | A Nomad's Consulting</title>
     <meta name="description" content="Personalized planning for gap years, sabbaticals, and international relocation, starting with Brazil. Book a consultation with A Nomad's Consulting.">
     <meta name="theme-color" content="#fbf0dc">
+    <link rel="canonical" href="https://mfebres0919.github.io/Nomad-s-Consulting/">
+
+    <!-- Link preview (texts, social): a snapshot of the hero -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="A Nomad's Consulting">
+    <meta property="og:title" content="Plan Your Move Abroad | A Nomad's Consulting">
+    <meta property="og:description" content="Personalized planning for gap years, sabbaticals, and international relocation, starting with Brazil.">
+    <meta property="og:url" content="https://mfebres0919.github.io/Nomad-s-Consulting/">
+    <meta property="og:image" content="https://mfebres0919.github.io/Nomad-s-Consulting/images/brand/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="A Nomad's Consulting homepage: Plan Your Move Abroad, over a sunset view of Rio de Janeiro">
+    <meta name="twitter:card" content="summary_large_image">
+
     <link rel="icon" href="favicon.png" type="image/png" sizes="48x48">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
@@ -15,9 +29,13 @@
     <link rel="preload" href="fonts/shrikhand-v17-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/poppins-v24-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
 
+    <!-- Approved exception (handbook Section 3): tiny head script so fade-ins start hidden -->
+    <script src="javascript/reveal-init.js"></script>
+
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/styles.css">
 
+    <script defer src="javascript/vendor/lenis.min.js"></script>
     <script defer src="javascript/global.js"></script>
     <script defer src="javascript/script.js"></script>
 </head>
@@ -108,7 +126,7 @@
             </picture>
 
             <!-- Vintage stamps that tilt slowly -->
-            <div class="hero__stamps" aria-hidden="true">
+            <div class="hero__stamps" aria-hidden="true" data-reveal="zoom" data-reveal-delay="2">
                 <picture class="hero__stamp hero__stamp--plane">
                     <source media="(max-width: 600px)" srcset="images/stamps/stamp-plane-m.webp" type="image/webp">
                     <source srcset="images/stamps/stamp-plane.webp" type="image/webp">
@@ -123,19 +141,19 @@
 
             <div class="hero__inner">
                 <div class="hero__content">
-                    <p class="hero__eyebrow">
+                    <p class="hero__eyebrow" data-reveal="down">
                         <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"><path d="M21 15.5v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0v5l-8 5v2l8-2.5V18l-2 1.5V21l3.5-1 3.5 1v-1.5L13 18v-5z" fill="currentColor"/></svg>
                         Starting with Brazil
                     </p>
 
-                    <h1 class="hero__title" id="hero-title">
+                    <h1 class="hero__title" id="hero-title" data-reveal="up" data-reveal-delay="1">
                         <span class="hero__title-line">Plan Your Move</span>
-                        <span class="hero__title-accent">Abroad</span>
+                        <span class="hero__title-accent"><span class="scribble-wrap">Abroad<svg class="scribble" aria-hidden="true" viewBox="0 0 220 18" preserveAspectRatio="none"><path d="M4 12C46 5 120 2 216 8" pathLength="1"/></svg></span></span>
                     </h1>
 
-                    <p class="hero__sub">Personalized planning for gap years, sabbaticals, and international relocation, from someone who's already made the move.</p>
+                    <p class="hero__sub" data-reveal="up" data-reveal-delay="2">Personalized planning for gap years, sabbaticals, and international relocation, from someone who's already made the move.</p>
 
-                    <ul class="hero__trust">
+                    <ul class="hero__trust" data-reveal="up" data-reveal-delay="3">
                         <li class="hero__trust-item">
                             <span class="hero__trust-icon" aria-hidden="true">
                                 <svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -158,7 +176,7 @@
                 </div>
 
                 <!-- Path bar: shortcuts to each service -->
-                <nav class="hero__paths" aria-label="Explore by plan">
+                <nav class="hero__paths" aria-label="Explore by plan" data-reveal="up" data-reveal-delay="4">
                     <a class="hero__path" href="#gap-year">
                         <span class="hero__path-icon" aria-hidden="true">
                             <svg width="20" height="20" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 9.5h17M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
@@ -192,33 +210,37 @@
         <!-- About -->
         <!-- ============================================ -->
         <section class="about" id="about" aria-labelledby="about-title">
+            <div class="botanicals" aria-hidden="true">
+                <img class="botanical botanical--about-palm" data-src="images/decor/palm-frond.svg" alt="" width="440" height="440" decoding="async">
+                <img class="botanical botanical--about-hibiscus" data-src="images/decor/hibiscus.svg" alt="" width="240" height="240" decoding="async">
+            </div>
             <div class="about__inner">
                 <!-- Heading sits above the photos on phones, beside them on desktop -->
-                <div class="about__header">
+                <div class="about__header" data-reveal="left">
                     <p class="section-eyebrow">Meet the Founder</p>
                     <h2 class="about__title" id="about-title">Hi, I'm Aahniyah. <span>This all started with my own move.</span></h2>
                 </div>
 
                 <!-- Polaroid collage -->
                 <div class="about__collage">
-                    <figure class="polaroid polaroid--main">
+                    <figure class="polaroid polaroid--main" data-reveal="left" data-reveal-delay="1">
                         <picture>
-                            <source media="(max-width: 600px)" srcset="images/about/aahniyah-portrait-m.webp" type="image/webp">
-                            <source srcset="images/about/aahniyah-portrait.webp" type="image/webp">
-                            <img class="polaroid__photo" src="images/about/aahniyah-portrait.jpg" alt="Aahniyah, the founder, sipping coffee at a café" width="800" height="1000" loading="lazy" decoding="async">
+                            <source media="(max-width: 600px)" data-srcset="images/about/aahniyah-portrait-m.webp" type="image/webp">
+                            <source data-srcset="images/about/aahniyah-portrait.webp" type="image/webp">
+                            <img class="polaroid__photo" data-src="images/about/aahniyah-portrait.jpg" alt="Aahniyah, the founder, sipping coffee at a café" width="800" height="1000" decoding="async">
                         </picture>
                     </figure>
 
-                    <figure class="polaroid polaroid--small">
+                    <figure class="polaroid polaroid--small" data-reveal="up" data-reveal-delay="3">
                         <picture>
-                            <source media="(max-width: 600px)" srcset="images/about/aahniyah-rio-m.webp" type="image/webp">
-                            <source srcset="images/about/aahniyah-rio.webp" type="image/webp">
-                            <img class="polaroid__photo" src="images/about/aahniyah-rio.jpg" alt="Aahniyah looking out over Rio de Janeiro" width="560" height="560" loading="lazy" decoding="async">
+                            <source media="(max-width: 600px)" data-srcset="images/about/aahniyah-rio-m.webp" type="image/webp">
+                            <source data-srcset="images/about/aahniyah-rio.webp" type="image/webp">
+                            <img class="polaroid__photo" data-src="images/about/aahniyah-rio.jpg" alt="Aahniyah looking out over Rio de Janeiro" width="560" height="560" decoding="async">
                         </picture>
                     </figure>
 
                     <!-- Postmark badge with her tagline -->
-                    <svg class="about__badge" aria-hidden="true" viewBox="0 0 200 200" width="200" height="200">
+                    <svg class="about__badge" data-reveal="zoom" data-reveal-delay="4" aria-hidden="true" viewBox="0 0 200 200" width="200" height="200">
                         <circle cx="100" cy="100" r="98" fill="currentColor"/>
                         <circle cx="100" cy="100" r="86" fill="none" stroke="#fff8ec" stroke-width="1.5" stroke-dasharray="3 5"/>
                         <!-- Each letter sits at its own angle so the ring closes evenly in every browser -->
@@ -251,18 +273,18 @@
                     </svg>
 
                     <picture class="about__stamp" aria-hidden="true">
-                        <source media="(max-width: 600px)" srcset="images/stamps/stamp-flower-m.webp" type="image/webp">
-                        <source srcset="images/stamps/stamp-flower.webp" type="image/webp">
-                        <img src="images/stamps/stamp-flower.png" alt="" width="360" height="254" loading="lazy" decoding="async">
+                        <source media="(max-width: 600px)" data-srcset="images/stamps/stamp-flower-m.webp" type="image/webp">
+                        <source data-srcset="images/stamps/stamp-flower.webp" type="image/webp">
+                        <img data-src="images/stamps/stamp-flower.png" alt="" width="360" height="254" decoding="async">
                     </picture>
                 </div>
 
                 <div class="about__content">
-                    <p class="about__text">In 2025, I took a <strong>gap year to travel the world</strong>, explore new cultures, and figure out where I could see myself settling down. I vlogged along the way, not as a tourist, but to understand <strong>what everyday life actually felt like</strong> in each country. What started as a search for my forever home turned into hopping from country to country and falling in love with <strong>the freedom of living abroad</strong>.</p>
+                    <p class="about__text" data-reveal="up">In 2025, I took a <strong>gap year to travel the world</strong>, explore new cultures, and figure out where I could see myself settling down. I vlogged along the way, not as a tourist, but to understand <strong>what everyday life actually felt like</strong> in each country. What started as a search for my forever home turned into hopping from country to country and falling in love with <strong>the freedom of living abroad</strong>.</p>
 
-                    <p class="about__text">Eventually, I <strong>established residency in Brazil</strong>, now my part-time home. Going through it myself taught me how hard it can be to navigate unfamiliar systems, find reliable information, and connect with the right people, and I built <strong>relationships with professionals who can make the move easier for you</strong>.</p>
+                    <p class="about__text" data-reveal="up">Eventually, I <strong>established residency in Brazil</strong>, now my part-time home. Going through it myself taught me how hard it can be to navigate unfamiliar systems, find reliable information, and connect with the right people, and I built <strong>relationships with professionals who can make the move easier for you</strong>.</p>
 
-                    <div class="about__details">
+                    <div class="about__details" data-reveal="right" data-reveal-delay="1">
                         <ul class="about__list">
                             <li>Gap year across multiple countries</li>
                             <li>Residency established in Brazil</li>
@@ -284,7 +306,7 @@
                         </div>
                     </div>
 
-                    <figure class="about__mission">
+                    <figure class="about__mission" data-reveal="up" data-reveal-delay="1">
                         <svg class="about__mission-icon" aria-hidden="true" width="40" height="32" viewBox="0 0 40 32"><path d="M0 32V19.2C0 8.6 5.1 2.2 15.4 0l2 4.3C11.6 6.1 8.7 9.6 8.4 14.9H16V32H0zm22 0V19.2C22 8.6 27.1 2.2 37.4 0l2 4.3c-5.8 1.8-8.7 5.3-9 10.6H38V32H22z" fill="currentColor"/></svg>
                         <blockquote>
                             <p>My goal is to make moving abroad feel less intimidating and more achievable, so you can experience the world and find a place that truly feels like home.</p>
@@ -292,7 +314,7 @@
                         <figcaption>Aahniyah, Founder</figcaption>
                     </figure>
 
-                    <a class="btn btn--primary" href="#book">
+                    <a class="btn btn--primary" href="#book" data-reveal="up" data-reveal-delay="2">
                         Book a Consultation
                         <svg class="btn__arrow" aria-hidden="true" width="18" height="18" viewBox="0 0 18 18"><path d="M3 9h12m-4.5-4.5L15 9l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </a>
@@ -307,19 +329,24 @@
         <!-- Services -->
         <!-- ============================================ -->
         <section class="services" id="services" aria-labelledby="services-title">
+            <div class="botanicals" aria-hidden="true">
+                <img class="botanical botanical--services-leaf" data-src="images/decor/tropical-leaf.svg" alt="" width="300" height="360" decoding="async">
+                <img class="botanical botanical--services-palm" data-src="images/decor/palm-frond.svg" alt="" width="440" height="440" decoding="async">
+                <img class="botanical botanical--services-hibiscus" data-src="images/decor/hibiscus.svg" alt="" width="240" height="240" decoding="async">
+            </div>
             <div class="services__inner">
                 <div class="services__header">
                     <picture class="services__stamp" aria-hidden="true">
-                        <source media="(max-width: 600px)" srcset="images/stamps/stamp-luggage-m.webp" type="image/webp">
-                        <source srcset="images/stamps/stamp-luggage.webp" type="image/webp">
-                        <img src="images/stamps/stamp-luggage.png" alt="" width="360" height="257" loading="lazy" decoding="async">
+                        <source media="(max-width: 600px)" data-srcset="images/stamps/stamp-luggage-m.webp" type="image/webp">
+                        <source data-srcset="images/stamps/stamp-luggage.webp" type="image/webp">
+                        <img data-src="images/stamps/stamp-luggage.png" alt="" width="360" height="257" decoding="async">
                     </picture>
 
-                    <p class="services__eyebrow">How I Can Help</p>
-                    <h2 class="services__title" id="services-title">Choose Your <span>Path Abroad</span></h2>
-                    <p class="services__intro">Whether you're taking time away or making the move for good, every plan is built around your goals, your timeline, and the life you want abroad.</p>
+                    <p class="services__eyebrow" data-reveal="down">How I Can Help</p>
+                    <h2 class="services__title" id="services-title" data-reveal="left" data-reveal-delay="1">Choose Your <span><span class="scribble-wrap">Path Abroad<svg class="scribble" aria-hidden="true" viewBox="0 0 220 18" preserveAspectRatio="none"><path d="M4 12C46 5 120 2 216 8" pathLength="1"/></svg></span></span></h2>
+                    <p class="services__intro" data-reveal="left" data-reveal-delay="2">Whether you're taking time away or making the move for good, every plan is built around your goals, your timeline, and the life you want abroad.</p>
 
-                    <ol class="services__steps" aria-label="How it works">
+                    <ol class="services__steps" aria-label="How it works" data-reveal="left" data-reveal-delay="3">
                         <li class="services__step">
                             <strong>Tell me your plans</strong>
                             <span>Fill out a short questionnaire</span>
@@ -334,26 +361,26 @@
                         </li>
                     </ol>
 
-                    <a class="btn btn--primary services__cta" href="#book">
+                    <a class="btn btn--primary services__cta" href="#book" data-reveal="up" data-reveal-delay="4">
                         Book a Consultation
                         <svg class="btn__arrow" aria-hidden="true" width="18" height="18" viewBox="0 0 18 18"><path d="M3 9h12m-4.5-4.5L15 9l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </a>
                 </div>
 
                 <!-- 3D carousel: the center card is active, the others tilt away behind it -->
-                <div class="services__carousel" aria-roledescription="carousel" aria-label="Services">
+                <div class="services__carousel" aria-roledescription="carousel" aria-label="Services" data-reveal="zoom" data-reveal-delay="1">
                     <!-- Backdrop: a warm sun disc and a dotted flight path behind the cards -->
                     <div class="services__backdrop" aria-hidden="true">
                         <span class="services__sun"></span>
-                        <svg class="services__route" viewBox="0 0 600 400" preserveAspectRatio="none"><path d="M10 330C120 180 230 360 330 230S520 40 590 90" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="2 11" stroke-linecap="round"/></svg>
+                        <svg class="services__route" viewBox="0 0 600 400"><path id="services-route" d="M10 330C120 180 230 360 330 230S520 40 590 90" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="2 11" stroke-linecap="round"/><g class="services__plane"><path d="M-12 0h9l7-10h4l-4 10h7l3-4h3l-2 4 2 4h-3l-3-4h-7l4 10h-4l-7-10h-9z" fill="#b8461b"/><animateMotion dur="16s" repeatCount="indefinite" rotate="auto"><mpath href="#services-route"/></animateMotion></g></svg>
                     </div>
 
                     <div class="services__stage">
                         <article class="service-card" id="relocation-planning" aria-roledescription="slide" aria-label="1 of 3">
                             <picture>
-                                <source media="(max-width: 600px)" srcset="images/services/relocation-planning-m.webp" type="image/webp">
-                                <source srcset="images/services/relocation-planning.webp" type="image/webp">
-                                <img class="service-card__img" src="images/services/relocation-planning.jpg" alt="Aahniyah resting on a rock above the Rio coastline" width="640" height="800" loading="lazy" decoding="async">
+                                <source media="(max-width: 600px)" data-srcset="images/services/relocation-planning-m.webp" type="image/webp">
+                                <source data-srcset="images/services/relocation-planning.webp" type="image/webp">
+                                <img class="service-card__img" data-src="images/services/relocation-planning.jpg" alt="Aahniyah resting on a rock above the Rio coastline" width="640" height="800" decoding="async">
                             </picture>
                             <span class="service-card__icon" aria-hidden="true"><svg viewBox="0 0 48 48" width="48" height="48"><circle cx="24" cy="27" r="15" fill="#e3a23b"/><circle cx="24" cy="22" r="13" fill="#fff8ec" stroke="#6a1a3a" stroke-width="2.4"/><path d="M11 22h26M24 9c4.2 3.6 6.2 8 6.2 13s-2 9.4-6.2 13M24 9c-4.2 3.6-6.2 8-6.2 13s2 9.4 6.2 13M13.5 15h21M13.5 29h21" fill="none" stroke="#6a1a3a" stroke-width="2" stroke-linecap="round"/></svg></span>
                             <div class="service-card__body">
@@ -369,9 +396,9 @@
 
                         <article class="service-card" id="consulting-packages" aria-roledescription="slide" aria-label="2 of 3">
                             <picture>
-                                <source media="(max-width: 600px)" srcset="images/services/consulting-packages-m.webp" type="image/webp">
-                                <source srcset="images/services/consulting-packages.webp" type="image/webp">
-                                <img class="service-card__img" src="images/services/consulting-packages.jpg" alt="Aahniyah smiling at a garden lookout" width="640" height="800" loading="lazy" decoding="async">
+                                <source media="(max-width: 600px)" data-srcset="images/services/consulting-packages-m.webp" type="image/webp">
+                                <source data-srcset="images/services/consulting-packages.webp" type="image/webp">
+                                <img class="service-card__img" data-src="images/services/consulting-packages.jpg" alt="Aahniyah smiling at a garden lookout" width="640" height="800" decoding="async">
                             </picture>
                             <span class="service-card__icon" aria-hidden="true"><svg viewBox="0 0 48 48" width="48" height="48"><circle cx="24" cy="30" r="14" fill="#e3a23b"/><path d="M23 8h2.6v34H23z" fill="#6a1a3a"/><path d="M13 12h20l4 3.5-4 3.5H13z" fill="#b8461b"/><path d="M35 22H15l-4 3.5 4 3.5h20z" fill="#6a1a3a"/><path d="M16 15.5h12M19 25.5h12" stroke="#fff8ec" stroke-width="1.2" stroke-linecap="round" opacity=".6"/></svg></span>
                             <div class="service-card__body">
@@ -387,9 +414,9 @@
 
                         <article class="service-card" id="gap-year" aria-roledescription="slide" aria-label="3 of 3">
                             <picture>
-                                <source media="(max-width: 600px)" srcset="images/services/gap-year-m.webp" type="image/webp">
-                                <source srcset="images/services/gap-year.webp" type="image/webp">
-                                <img class="service-card__img" src="images/services/gap-year.jpg" alt="Aahniyah looking down into a green river canyon" width="640" height="800" loading="lazy" decoding="async">
+                                <source media="(max-width: 600px)" data-srcset="images/services/gap-year-m.webp" type="image/webp">
+                                <source data-srcset="images/services/gap-year.webp" type="image/webp">
+                                <img class="service-card__img" data-src="images/services/gap-year.jpg" alt="Aahniyah looking down into a green river canyon" width="640" height="800" decoding="async">
                             </picture>
                             <span class="service-card__icon" aria-hidden="true"><svg viewBox="0 0 48 48" width="48" height="48"><path d="M6 38a18 18 0 0 1 36 0z" fill="#e3a23b"/><path d="M8 38c5-4 9-5 14-3s9 1 12-2 6-3 8-1v6z" fill="#b8461b"/><path d="M25 38c0-8 1-15 4-21" fill="none" stroke="#6a1a3a" stroke-width="2.6" stroke-linecap="round"/><path d="M29 17c-3-4-8-5-13-3 4 0 8 1 13 3zm0 0c-1-5-5-8-10-8 4 2 7 4 10 8zm0 0c2-5 6-7 11-6-4 1-8 3-11 6zm0 0c4-2 9-1 12 3-4-1-8-2-12-3zm0 0c-4 1-7 4-8 8 2-3 5-6 8-8z" fill="#6a1a3a" stroke="#6a1a3a" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
                             <div class="service-card__body">
@@ -435,21 +462,21 @@
             <!-- Rotating photos from her travels: the first loads with the section, the rest just before they appear -->
             <div class="cta__bg" aria-hidden="true">
                 <picture class="cta__slide is-active">
-                    <source media="(max-width: 767px)" srcset="images/cta/aahniyah-giraffe-m.webp" type="image/webp">
-                    <source srcset="images/cta/aahniyah-giraffe.webp" type="image/webp">
-                    <img src="images/cta/aahniyah-giraffe.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async">
+                    <source media="(max-width: 767px)" data-srcset="images/cta/aahniyah-giraffe-m.webp" type="image/webp">
+                    <source data-srcset="images/cta/aahniyah-giraffe.webp" type="image/webp">
+                    <img data-src="images/cta/aahniyah-giraffe.jpg" alt="" width="1280" height="720" decoding="async">
                 </picture>
-                <picture class="cta__slide">
+                <picture class="cta__slide" data-lazy-skip>
                     <source media="(max-width: 767px)" data-srcset="images/cta/aahniyah-rio-rock-m.webp" type="image/webp">
                     <source data-srcset="images/cta/aahniyah-rio-rock.webp" type="image/webp">
                     <img data-src="images/cta/aahniyah-rio-rock.jpg" alt="" width="1280" height="720" decoding="async">
                 </picture>
-                <picture class="cta__slide">
+                <picture class="cta__slide" data-lazy-skip>
                     <source media="(max-width: 767px)" data-srcset="images/cta/aahniyah-canyon-m.webp" type="image/webp">
                     <source data-srcset="images/cta/aahniyah-canyon.webp" type="image/webp">
                     <img data-src="images/cta/aahniyah-canyon.jpg" alt="" width="1280" height="720" decoding="async">
                 </picture>
-                <picture class="cta__slide">
+                <picture class="cta__slide" data-lazy-skip>
                     <source media="(max-width: 767px)" data-srcset="images/cta/aahniyah-maasai-m.webp" type="image/webp">
                     <source data-srcset="images/cta/aahniyah-maasai.webp" type="image/webp">
                     <img data-src="images/cta/aahniyah-maasai.jpg" alt="" width="1280" height="720" decoding="async">
@@ -460,10 +487,10 @@
             <svg class="section-divider section-divider--top cta__divider-top" aria-hidden="true" viewBox="0 0 1000 100" preserveAspectRatio="none"><g fill="currentColor"><path d="M0 1v99c134.3 0 153.7-99 296-99H0Z" opacity=".5"/><path d="M1000 4v86C833.3 90 833.3 3.6 666.7 3.6S500 90 333.3 90 166.7 4 0 4h1000Z" opacity=".5"/><path d="M617 1v86C372 119 384 1 196 1h421Z" opacity=".5"/><path d="M1000 0H0v52C62.5 28 125 4 250 4c250 0 250 96 500 96 125 0 187.5-24 250-48V0Z"/></g></svg>
 
             <div class="cta__content">
-                <p class="cta__eyebrow">Your next chapter is waiting</p>
-                <h2 class="cta__title" id="cta-title">Less Dreaming. <span>More Departing.</span></h2>
-                <p class="cta__text">The country you keep daydreaming about doesn't have to stay on your vision board. Let's map out the move, the timeline, and the people who'll help you land, so the only thing left to plan is your first morning abroad.</p>
-                <a class="btn btn--primary cta__btn" href="#book">
+                <p class="cta__eyebrow" data-reveal="down">Your next chapter is waiting</p>
+                <h2 class="cta__title" id="cta-title" data-reveal="zoom" data-reveal-delay="1">Less Dreaming. <span>More Departing.</span></h2>
+                <p class="cta__text" data-reveal="up" data-reveal-delay="2">The country you keep daydreaming about doesn't have to stay on your vision board. Let's map out the move, the timeline, and the people who'll help you land, so the only thing left to plan is your first morning abroad.</p>
+                <a class="btn btn--primary cta__btn" href="#book" data-reveal="up" data-reveal-delay="3">
                     Book Your Consultation
                     <svg class="btn__arrow" aria-hidden="true" width="18" height="18" viewBox="0 0 18 18"><path d="M3 9h12m-4.5-4.5L15 9l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
@@ -482,63 +509,67 @@
         <!-- Contact -->
         <!-- ============================================ -->
         <section class="contact" id="contact" aria-labelledby="contact-title">
+            <div class="botanicals" aria-hidden="true">
+                <img class="botanical botanical--contact-leaf" data-src="images/decor/tropical-leaf.svg" alt="" width="300" height="360" decoding="async">
+                <img class="botanical botanical--contact-hibiscus" data-src="images/decor/hibiscus.svg" alt="" width="240" height="240" decoding="async">
+            </div>
             <!-- Snapshots from her travels: a slow, looping strip of polaroids -->
             <div class="gallery">
-                <div class="gallery__header">
+                <div class="gallery__header" data-reveal="down">
                     <p class="gallery__eyebrow">Where I've Been</p>
                     <h2 class="gallery__title">Snapshots From the Road</h2>
                     <p class="gallery__sub">Real moments from my gap year, from Tokyo streets to Kenyan safaris.</p>
                 </div>
 
-                <div class="gallery__viewport">
+                <div class="gallery__viewport" data-reveal="right" data-reveal-delay="1">
                     <div class="gallery__track">
                         <ul class="gallery__list" aria-label="Photos from Aahniyah's travels">
                         <li class="gallery__item">
                             <picture>
-                                <source srcset="images/gallery/travel-tokyo.webp" type="image/webp">
-                                <img src="images/gallery/travel-tokyo.jpg" alt="On the streets of Tokyo" width="360" height="360" loading="lazy" decoding="async">
+                                <source data-srcset="images/gallery/travel-tokyo.webp" type="image/webp">
+                                <img data-src="images/gallery/travel-tokyo.jpg" alt="On the streets of Tokyo" width="360" height="360" decoding="async">
                             </picture>
                         </li>
                         <li class="gallery__item">
                             <picture>
-                                <source srcset="images/gallery/travel-medellin.webp" type="image/webp">
-                                <img src="images/gallery/travel-medellin.jpg" alt="At the Medellín sign" width="360" height="360" loading="lazy" decoding="async">
+                                <source data-srcset="images/gallery/travel-medellin.webp" type="image/webp">
+                                <img data-src="images/gallery/travel-medellin.jpg" alt="At the Medellín sign" width="360" height="360" decoding="async">
                             </picture>
                         </li>
                         <li class="gallery__item">
                             <picture>
-                                <source srcset="images/gallery/travel-maasai.webp" type="image/webp">
-                                <img src="images/gallery/travel-maasai.jpg" alt="With new friends in traditional Maasai dress" width="360" height="360" loading="lazy" decoding="async">
+                                <source data-srcset="images/gallery/travel-maasai.webp" type="image/webp">
+                                <img data-src="images/gallery/travel-maasai.jpg" alt="With new friends in traditional Maasai dress" width="360" height="360" decoding="async">
                             </picture>
                         </li>
                         <li class="gallery__item">
                             <picture>
-                                <source srcset="images/gallery/travel-dirt-bike-crew.webp" type="image/webp">
-                                <img src="images/gallery/travel-dirt-bike-crew.jpg" alt="With a dirt bike riding crew" width="360" height="360" loading="lazy" decoding="async">
+                                <source data-srcset="images/gallery/travel-dirt-bike-crew.webp" type="image/webp">
+                                <img data-src="images/gallery/travel-dirt-bike-crew.jpg" alt="With a dirt bike riding crew" width="360" height="360" decoding="async">
                             </picture>
                         </li>
                         <li class="gallery__item">
                             <picture>
-                                <source srcset="images/gallery/travel-dirt-bike.webp" type="image/webp">
-                                <img src="images/gallery/travel-dirt-bike.jpg" alt="Suited up for a dirt bike ride" width="360" height="360" loading="lazy" decoding="async">
+                                <source data-srcset="images/gallery/travel-dirt-bike.webp" type="image/webp">
+                                <img data-src="images/gallery/travel-dirt-bike.jpg" alt="Suited up for a dirt bike ride" width="360" height="360" decoding="async">
                             </picture>
                         </li>
                         <li class="gallery__item">
                             <picture>
-                                <source srcset="images/gallery/travel-boat.webp" type="image/webp">
-                                <img src="images/gallery/travel-boat.jpg" alt="Out on the water on a boat" width="360" height="360" loading="lazy" decoding="async">
+                                <source data-srcset="images/gallery/travel-boat.webp" type="image/webp">
+                                <img data-src="images/gallery/travel-boat.jpg" alt="Out on the water on a boat" width="360" height="360" decoding="async">
                             </picture>
                         </li>
                         <li class="gallery__item">
                             <picture>
-                                <source srcset="images/gallery/travel-waterfall.webp" type="image/webp">
-                                <img src="images/gallery/travel-waterfall.jpg" alt="At the bottom of a jungle waterfall" width="360" height="360" loading="lazy" decoding="async">
+                                <source data-srcset="images/gallery/travel-waterfall.webp" type="image/webp">
+                                <img data-src="images/gallery/travel-waterfall.jpg" alt="At the bottom of a jungle waterfall" width="360" height="360" decoding="async">
                             </picture>
                         </li>
                         <li class="gallery__item">
                             <picture>
-                                <source srcset="images/gallery/travel-mirror.webp" type="image/webp">
-                                <img src="images/gallery/travel-mirror.jpg" alt="A mirror selfie on the road" width="360" height="360" loading="lazy" decoding="async">
+                                <source data-srcset="images/gallery/travel-mirror.webp" type="image/webp">
+                                <img data-src="images/gallery/travel-mirror.jpg" alt="A mirror selfie on the road" width="360" height="360" decoding="async">
                             </picture>
                         </li>
                         </ul>
@@ -546,50 +577,50 @@
                         <ul class="gallery__list" aria-hidden="true">
                         <li class="gallery__item">
                             <picture>
-                                <source srcset="images/gallery/travel-tokyo.webp" type="image/webp">
-                                <img src="images/gallery/travel-tokyo.jpg" alt="" width="360" height="360" loading="lazy" decoding="async">
+                                <source data-srcset="images/gallery/travel-tokyo.webp" type="image/webp">
+                                <img data-src="images/gallery/travel-tokyo.jpg" alt="" width="360" height="360" decoding="async">
                             </picture>
                         </li>
                         <li class="gallery__item">
                             <picture>
-                                <source srcset="images/gallery/travel-medellin.webp" type="image/webp">
-                                <img src="images/gallery/travel-medellin.jpg" alt="" width="360" height="360" loading="lazy" decoding="async">
+                                <source data-srcset="images/gallery/travel-medellin.webp" type="image/webp">
+                                <img data-src="images/gallery/travel-medellin.jpg" alt="" width="360" height="360" decoding="async">
                             </picture>
                         </li>
                         <li class="gallery__item">
                             <picture>
-                                <source srcset="images/gallery/travel-maasai.webp" type="image/webp">
-                                <img src="images/gallery/travel-maasai.jpg" alt="" width="360" height="360" loading="lazy" decoding="async">
+                                <source data-srcset="images/gallery/travel-maasai.webp" type="image/webp">
+                                <img data-src="images/gallery/travel-maasai.jpg" alt="" width="360" height="360" decoding="async">
                             </picture>
                         </li>
                         <li class="gallery__item">
                             <picture>
-                                <source srcset="images/gallery/travel-dirt-bike-crew.webp" type="image/webp">
-                                <img src="images/gallery/travel-dirt-bike-crew.jpg" alt="" width="360" height="360" loading="lazy" decoding="async">
+                                <source data-srcset="images/gallery/travel-dirt-bike-crew.webp" type="image/webp">
+                                <img data-src="images/gallery/travel-dirt-bike-crew.jpg" alt="" width="360" height="360" decoding="async">
                             </picture>
                         </li>
                         <li class="gallery__item">
                             <picture>
-                                <source srcset="images/gallery/travel-dirt-bike.webp" type="image/webp">
-                                <img src="images/gallery/travel-dirt-bike.jpg" alt="" width="360" height="360" loading="lazy" decoding="async">
+                                <source data-srcset="images/gallery/travel-dirt-bike.webp" type="image/webp">
+                                <img data-src="images/gallery/travel-dirt-bike.jpg" alt="" width="360" height="360" decoding="async">
                             </picture>
                         </li>
                         <li class="gallery__item">
                             <picture>
-                                <source srcset="images/gallery/travel-boat.webp" type="image/webp">
-                                <img src="images/gallery/travel-boat.jpg" alt="" width="360" height="360" loading="lazy" decoding="async">
+                                <source data-srcset="images/gallery/travel-boat.webp" type="image/webp">
+                                <img data-src="images/gallery/travel-boat.jpg" alt="" width="360" height="360" decoding="async">
                             </picture>
                         </li>
                         <li class="gallery__item">
                             <picture>
-                                <source srcset="images/gallery/travel-waterfall.webp" type="image/webp">
-                                <img src="images/gallery/travel-waterfall.jpg" alt="" width="360" height="360" loading="lazy" decoding="async">
+                                <source data-srcset="images/gallery/travel-waterfall.webp" type="image/webp">
+                                <img data-src="images/gallery/travel-waterfall.jpg" alt="" width="360" height="360" decoding="async">
                             </picture>
                         </li>
                         <li class="gallery__item">
                             <picture>
-                                <source srcset="images/gallery/travel-mirror.webp" type="image/webp">
-                                <img src="images/gallery/travel-mirror.jpg" alt="" width="360" height="360" loading="lazy" decoding="async">
+                                <source data-srcset="images/gallery/travel-mirror.webp" type="image/webp">
+                                <img data-src="images/gallery/travel-mirror.jpg" alt="" width="360" height="360" decoding="async">
                             </picture>
                         </li>
                         </ul>
@@ -605,14 +636,14 @@
             <!-- Contact panel over a photo from her safari -->
             <div class="contact__panel">
                 <picture class="contact__bg" aria-hidden="true">
-                    <source media="(max-width: 767px)" srcset="images/contact/safari-plains-m.webp" type="image/webp">
-                    <source srcset="images/contact/safari-plains.webp" type="image/webp">
-                    <img src="images/contact/safari-plains.jpg" alt="" width="1600" height="1000" loading="lazy" decoding="async">
+                    <source media="(max-width: 767px)" data-srcset="images/contact/safari-plains-m.webp" type="image/webp">
+                    <source data-srcset="images/contact/safari-plains.webp" type="image/webp">
+                    <img data-src="images/contact/safari-plains.jpg" alt="" width="1600" height="1000" decoding="async">
                 </picture>
 
                 <div class="contact__inner">
                     <!-- General questions only; consultations go through the questionnaire -->
-                    <form class="contact__form" name="contact" method="post" action="#contact" aria-labelledby="contact-title">
+                    <form class="contact__form" data-reveal="left" name="contact" method="post" action="#contact" aria-labelledby="contact-title">
                         <p class="section-eyebrow">Send a message</p>
                         <h2 class="contact__title" id="contact-title">Questions? I'd Love to Hear From You</h2>
 
@@ -645,7 +676,7 @@
                         </button>
                     </form>
 
-                    <div class="contact__info">
+                    <div class="contact__info" data-reveal="right" data-reveal-delay="2">
                         <p class="contact__info-eyebrow">Need any help?</p>
                         <h3 class="contact__info-title">Get in Touch</h3>
                         <p class="contact__info-text">Not ready for a full consultation yet? Send a quick question about gap years, sabbaticals, or moving to Brazil, and I'll point you in the right direction.</p>
@@ -684,12 +715,12 @@
     <!-- ============================================ -->
     <footer class="footer">
         <div class="footer__inner">
-            <div class="footer__brand">
+            <div class="footer__brand" data-reveal="up">
                 <a class="footer__logo" href="#top">
                     <span class="visually-hidden">A Nomad's Consulting, back to top</span>
                     <picture>
-                        <source srcset="images/brand/logo-sm.webp" type="image/webp">
-                        <img src="images/brand/logo-sm.png" alt="" width="300" height="182" loading="lazy" decoding="async">
+                        <source data-srcset="images/brand/logo-sm.webp" type="image/webp">
+                        <img data-src="images/brand/logo-sm.png" alt="" width="300" height="182" decoding="async">
                     </picture>
                 </a>
                 <p class="footer__tagline">Go somewhere. Stay awhile.</p>
@@ -703,7 +734,7 @@
                 </ul>
             </div>
 
-            <nav class="footer__col" aria-label="Footer">
+            <nav class="footer__col" aria-label="Footer" data-reveal="up" data-reveal-delay="1">
                 <h2 class="footer__heading">Explore</h2>
                 <ul class="footer__links">
                     <li><a href="#top">Home</a></li>
@@ -713,7 +744,7 @@
                 </ul>
             </nav>
 
-            <div class="footer__col">
+            <div class="footer__col" data-reveal="up" data-reveal-delay="2">
                 <h2 class="footer__heading">Services</h2>
                 <ul class="footer__links">
                     <li><a href="#relocation-planning">Personalized Relocation Planning</a></li>
@@ -722,7 +753,7 @@
                 </ul>
             </div>
 
-            <div class="footer__col">
+            <div class="footer__col" data-reveal="up" data-reveal-delay="3">
                 <h2 class="footer__heading">Get in Touch</h2>
                 <ul class="footer__links">
                     <!-- PLACEHOLDER: her business email -->

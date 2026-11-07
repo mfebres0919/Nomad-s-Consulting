@@ -369,7 +369,13 @@
     position: relative;
     padding: clamp(4.5rem, 10vw, 7.5rem) var(--gutter) clamp(7rem, 14vw, 11rem);
     overflow: hidden;
-    background: var(--cream) url("../images/decor/about-map.svg") no-repeat center bottom / 1100px auto;
+    background: var(--cream) no-repeat center bottom / 1100px auto;
+}
+
+/* Background art loads when the section arrives (always without JS) */
+html:not(.js) .about,
+.about.is-near {
+    background-image: url("../images/decor/about-map.svg");
 }
 
 .about__inner {
@@ -727,9 +733,22 @@
    becomes a 3D carousel where the center card faces forward. */
 .services {
     position: relative;
+    isolation: isolate;
     padding: clamp(3rem, 6vw, 4.5rem) 0 clamp(4.5rem, 10vw, 7.5rem);
     overflow: hidden;
-    background: var(--sand);
+    background: var(--sand) no-repeat center / cover;
+}
+
+html:not(.js) .services,
+.services.is-near {
+    background-image: url("../images/decor/services-bg.svg");
+}
+
+.services__inner,
+.services > .services__header,
+.services > .services__carousel {
+    position: relative;
+    z-index: 1;
 }
 
 .services__header {
@@ -1396,7 +1415,12 @@
     position: relative;
     padding: clamp(2.5rem, 6vw, 4rem) 0 clamp(4.5rem, 10vw, 7rem);
     overflow: hidden;
-    background: var(--cream) url("../images/decor/contact-waves.svg") center top / 1400px auto repeat;
+    background: var(--cream) center top / 1400px auto repeat;
+}
+
+html:not(.js) .contact,
+.contact.is-near {
+    background-image: url("../images/decor/contact-waves.svg");
 }
 
 /* Photo strip from her travels */
@@ -1752,4 +1776,99 @@
 
 .contact {
     padding-bottom: clamp(7rem, 14vw, 10rem);
+}
+
+
+/* ---------- Botanical placements ---------- */
+.about__inner,
+.contact .gallery,
+.contact .contact__panel {
+    position: relative;
+    z-index: 1;
+}
+
+.botanical--about-palm {
+    --leaf-tilt: 90deg;
+    top: -3rem;
+    left: -3.5rem;
+    width: clamp(10rem, 20vw, 16rem);
+    opacity: 0.8;
+    transform-origin: 10% 10%;
+}
+
+.botanical--about-hibiscus {
+    --leaf-tilt: 14deg;
+    right: -2rem;
+    bottom: 5rem;
+    width: clamp(5rem, 9vw, 7.5rem);
+    animation-duration: 9s;
+}
+
+.botanical--services-leaf {
+    --leaf-tilt: -125deg;
+    top: 30%;
+    right: -4.5rem;
+    width: clamp(7rem, 13vw, 11rem);
+    opacity: 0.9;
+    transform-origin: 50% 95%;
+    animation-duration: 8s;
+}
+
+.botanical--services-palm {
+    --leaf-tilt: 40deg;
+    bottom: -3rem;
+    left: -6rem;
+    width: clamp(9rem, 18vw, 15rem);
+    opacity: 0.8;
+    transform-origin: 5% 90%;
+    animation-duration: 6.5s;
+}
+
+.botanical--services-hibiscus {
+    --leaf-tilt: -12deg;
+    right: 8%;
+    bottom: 3rem;
+    width: clamp(3.5rem, 6vw, 5rem);
+    animation-duration: 10s;
+}
+
+.botanical--contact-leaf {
+    --leaf-tilt: 120deg;
+    top: 2rem;
+    left: -4rem;
+    width: clamp(6rem, 11vw, 9.5rem);
+    opacity: 0.85;
+    transform-origin: 50% 95%;
+}
+
+.botanical--contact-hibiscus {
+    --leaf-tilt: 20deg;
+    top: 3rem;
+    right: 4%;
+    width: clamp(3.5rem, 6vw, 5rem);
+    animation-duration: 8.5s;
+}
+
+/* On phones, keep only the softest accents so text stays clear */
+@media (max-width: 767px) {
+    .botanical--services-hibiscus,
+    .botanical--contact-hibiscus {
+        display: none;
+    }
+
+    .botanical--about-palm {
+        top: -2rem;
+        left: -3rem;
+        opacity: 0.5;
+    }
+
+    .botanical--services-leaf,
+    .botanical--contact-leaf {
+        opacity: 0.55;
+    }
+}
+
+/* Plane flying the dotted route behind the service cards */
+.services__plane {
+    opacity: 0.75;
 }

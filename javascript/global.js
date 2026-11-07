@@ -259,3 +259,168 @@
 
     update();
 })();
+
+/* ---------- Smooth scrolling (Lenis) ----------
+   Mouse wheel and trackpad scrolling ease slightly instead of jumping.
+   lerp 0.15 stays close to native so it never feels laggy. Touch
+   scrolling stays native, and it's off for reduced motion. In-page
+   links glide to their section and still land below the header. */
+(function () {
+    "use strict";
+
+    if (typeof Lenis === "undefined" || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        return;
+    }
+
+    var lenis = new Lenis({ lerp: 0.15, smoothWheel: true });
+    window.lenis = lenis;
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    document.addEventListener("click", function (event) {
+        if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey) {
+            return;
+        }
+
+        var link = event.target.closest("a[href^='#']");
+
+        if (!link || link.getAttribute("href").length < 2) {
+            return;
+        }
+
+        var target = document.getElementById(link.getAttribute("href").slice(1));
+
+        if (!target) {
+            return;
+        }
+
+        event.preventDefault();
+
+        var pad = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
+        lenis.scrollTo(target, { offset: -pad });
+        history.pushState(null, "", link.getAttribute("href"));
+
+        // Let listeners (like the services carousel) react to the new hash
+        window.dispatchEvent(new HashChangeEvent("hashchange"));
+
+        // Move keyboard focus too, like a normal anchor jump
+        if (!target.hasAttribute("tabindex")) {
+            target.setAttribute("tabindex", "-1");
+        }
+
+        target.focus({ preventScroll: true });
+    });
+})();
+
+/* ---------- Load images when their section arrives ----------
+   Images below the hero carry data-src / data-srcset and only load
+   when their section is about to come on screen. Each one fades in
+   once it has loaded. */
+(function () {
+    "use strict";
+
+    var sections = document.querySelectorAll("main > section, footer");
+
+    function loadImages(scope) {
+        scope.querySelectorAll("img[data-src]").forEach(function (img) {
+            var picture = img.closest("picture");
+
+            if (img.closest("[data-lazy-skip]")) {
+                return;
+            }
+
+            if (picture) {
+                picture.querySelectorAll("source[data-srcset]").forEach(function (source) {
+                    source.srcset = source.dataset.srcset;
+                    source.removeAttribute("data-srcset");
+                });
+            }
+
+            img.classList.add("is-pending");
+            img.addEventListener("load", function () {
+                img.classList.add("is-loaded");
+                img.classList.remove("is-pending");
+            }, { once: true });
+
+            img.src = img.dataset.src;
+            img.removeAttribute("data-src");
+        });
+    }
+
+    if (!("IntersectionObserver" in window)) {
+        loadImages(document);
+        sections.forEach(function (section) {
+            section.classList.add("is-near");
+        });
+        return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                loadImages(entry.target);
+                // Lets CSS background art load now too
+                entry.target.classList.add("is-near");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { rootMargin: "100px 0px" });
+
+    sections.forEach(function (section) {
+        observer.observe(section);
+    });
+
+    // Slideshow photos load on their own schedule; show them softly too
+    document.addEventListener("load", function (event) {
+        if (event.target.tagName === "IMG") {
+            event.target.classList.add("is-loaded");
+        }
+    }, true);
+})();
+
+/* ---------- Fade-ins ----------
+   Elements with data-reveal fade in slowly (about 2.2s) as they come
+   on screen. Once finished, the attribute is removed so the element
+   gets its normal transitions back (button hovers and so on). */
+(function () {
+    "use strict";
+
+    var items = document.querySelectorAll("[data-reveal]");
+
+    function finish(el) {
+        el.addEventListener("transitionend", function done(event) {
+            if (event.target === el && event.propertyName === "filter") {
+                el.removeAttribute("data-reveal");
+                el.removeAttribute("data-reveal-delay");
+                el.removeEventListener("transitionend", done);
+            }
+        });
+    }
+
+    if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        items.forEach(function (el) {
+            el.classList.add("is-revealed");
+        });
+        return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-revealed");
+                finish(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.1 });
+
+    items.forEach(function (el) {
+        observer.observe(el);
+    });
+})();
+
