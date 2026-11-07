@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none">
+  <!-- Globe grid, top right -->
+  <g stroke="#6a1a3a" stroke-opacity=".09" stroke-width="1.5">
+    <circle cx="1330" cy="120" r="230"/>
+    <ellipse cx="1330" cy="120" rx="150" ry="230"/>
+    <ellipse cx="1330" cy="120" rx="70" ry="230"/>
+    <path d="M1100 120h460M1122 25c140 30 276 30 416 0M1122 215c140-30 276-30 416 0M1160 -20c110 22 230 22 340 0M1160 260c110-22 230-22 340 0"/>
+  </g>
+  <!-- Globe grid, bottom left -->
+  <g stroke="#6a1a3a" stroke-opacity=".07" stroke-width="1.5">
+    <circle cx="60" cy="860" r="190"/>
+    <ellipse cx="60" cy="860" rx="120" ry="190"/>
+    <ellipse cx="60" cy="860" rx="50" ry="190"/>
+    <path d="M-130 860h380M-112 785c115 25 229 25 344 0M-80 720c90 20 190 20 280 0"/>
+  </g>
+  <!-- Dashed flight path -->
+  <path d="M40 700C260 520 420 760 640 600S980 260 1180 300" stroke="#b8461b" stroke-opacity=".22" stroke-width="2.5" stroke-dasharray="2 12" stroke-linecap="round"/>
+  <!-- Plane at the end of the path -->
+  <g transform="translate(1196 296) rotate(-6) scale(1.4)" fill="#b8461b" fill-opacity=".3">
+    <path d="M21 15.5v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0v5l-8 5v2l8-2.5V18l-2 1.5V21l3.5-1 3.5 1v-1.5L13 18v-5z" transform="rotate(90 12 12) translate(-12 -12)"/>
+  </g>
+  <!-- Origin pin -->
+  <circle cx="40" cy="700" r="6" fill="#b8461b" fill-opacity=".25"/>
+  <circle cx="40" cy="700" r="13" stroke="#b8461b" stroke-opacity=".2" stroke-width="1.5"/>
+  <!-- Postmark waves, bottom right -->
+  <g stroke="#6a1a3a" stroke-opacity=".1" stroke-width="2" stroke-linecap="round">
+    <path d="M1140 760c25-14 50-14 75 0s50 14 75 0 50-14 75 0 50 14 75 0"/>
+    <path d="M1140 785c25-14 50-14 75 0s50 14 75 0 50-14 75 0 50 14 75 0"/>
+    <path d="M1140 810c25-14 50-14 75 0s50 14 75 0 50-14 75 0 50 14 75 0"/>
+    <path d="M1140 835c25-14 50-14 75 0s50 14 75 0 50-14 75 0 50 14 75 0"/>
+  </g>
+  <circle cx="1080" cy="800" r="48" stroke="#6a1a3a" stroke-opacity=".1" stroke-width="2"/>
+  <circle cx="1080" cy="800" r="38" stroke="#6a1a3a" stroke-opacity=".08" stroke-width="1.5" stroke-dasharray="3 5"/>
+  <!-- Scattered dots -->
+  <g fill="#e3a23b" fill-opacity=".35">
+    <circle cx="560" cy="110" r="3"/><circle cx="610" cy="140" r="2"/><circle cx="880" cy="820" r="3"/><circle cx="930" cy="790" r="2"/><circle cx="300" cy="200" r="2.5"/>
+  </g>
+</svg>

@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gap Year, Sabbatical &amp; Relocation Planning | A Nomad's Consulting</title>
+    <meta name="description" content="Personalized planning for gap years, sabbaticals, and international relocation, starting with Brazil. Book a consultation with A Nomad's Consulting.">
+    <meta name="theme-color" content="#fbf0dc">
+    <link rel="icon" href="favicon.png" type="image/png" sizes="48x48">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Above-the-fold assets: hero photo and the two fonts used in the hero -->
+    <link rel="preload" as="image" href="images/hero/rio-sugarloaf-m.webp" type="image/webp" media="(max-width: 767px)" fetchpriority="high">
+    <link rel="preload" as="image" href="images/hero/rio-sugarloaf.webp" type="image/webp" media="(min-width: 768px)" fetchpriority="high">
+    <link rel="preload" href="fonts/shrikhand-v17-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/poppins-v24-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script defer src="javascript/global.js"></script>
+    <script defer src="javascript/script.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- ============================================ -->
+    <!-- Navigation -->
+    <!-- ============================================ -->
+    <header class="nav" id="nav">
+        <!-- Top bar: email and socials (tucks away on scroll) -->
+        <div class="topbar">
+            <div class="topbar__inner">
+                <!-- PLACEHOLDER: her business email -->
+                <a class="topbar__link" href="mailto:hello@example.com">
+                    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m3.5 7 8.5 6 8.5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                    <span>hello@example.com</span>
+                </a>
+
+                <p class="topbar__note">
+                    <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+                    Currently in Brazil
+                </p>
+
+                <!-- PLACEHOLDER: swap # for her real profile links -->
+                <ul class="topbar__social">
+                    <li><a class="topbar__icon" href="#"><span class="visually-hidden">TikTok</span><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"><path d="M14 3v11.2a3.3 3.3 0 1 1-2.8-3.3M14 3c.4 2.7 2.4 4.6 5 4.8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                    <li><a class="topbar__icon" href="#"><span class="visually-hidden">Instagram</span><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3.8" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></li>
+                    <li><a class="topbar__icon" href="#"><span class="visually-hidden">YouTube</span><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m10 9.2 5 2.8-5 2.8z" fill="currentColor"/></svg></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="nav__inner">
+            <a class="nav__brand" href="#top">
+                <span class="visually-hidden">A Nomad's Consulting home</span>
+                <picture>
+                    <source srcset="images/brand/logo-sm.webp" type="image/webp">
+                    <img src="images/brand/logo-sm.png" alt="" width="300" height="182" decoding="async">
+                </picture>
+            </a>
+
+            <nav class="nav__menu" id="nav-menu" aria-label="Main">
+                <!-- Pill that slides behind the active link (desktop) -->
+                <span class="nav__indicator" aria-hidden="true"></span>
+                <ul class="nav__links">
+                    <li class="nav__item"><a class="nav__link" href="#top">Home</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
+                    <li class="nav__item nav__item--dropdown">
+                        <button class="nav__link nav__drop-toggle" type="button" aria-expanded="false" aria-controls="services-menu">
+                            Services
+                            <svg class="nav__chevron" aria-hidden="true" width="12" height="12" viewBox="0 0 12 12"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="nav__dropdown" id="services-menu">
+                            <ul class="nav__dropdown-list">
+                                <li><a class="nav__dropdown-link" href="#relocation-planning">Personalized Relocation Planning</a></li>
+                                <li><a class="nav__dropdown-link" href="#consulting-packages">Relocation Consulting Packages</a></li>
+                                <li><a class="nav__dropdown-link" href="#gap-year">Gap Year &amp; Sabbatical Planning</a></li>
+                                <li><a class="nav__dropdown-link nav__dropdown-link--all" href="#services">View all services</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
+                    <li class="nav__item nav__item--cta"><a class="btn btn--primary" href="#book">Book a Consultation</a></li>
+                </ul>
+            </nav>
+
+            <a class="btn btn--primary nav__cta" href="#book">Book a Consultation</a>
+
+            <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+                <span class="nav__bar"></span>
+                <span class="nav__bar"></span>
+                <span class="nav__bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- ============================================ -->
+        <!-- Hero -->
+        <!-- ============================================ -->
+        <section class="hero" id="top" aria-labelledby="hero-title">
+            <picture class="hero__bg" aria-hidden="true">
+                <source media="(max-width: 767px)" srcset="images/hero/rio-sugarloaf-m.webp" type="image/webp">
+                <source media="(max-width: 767px)" srcset="images/hero/rio-sugarloaf-m.jpg">
+                <source srcset="images/hero/rio-sugarloaf.webp" type="image/webp">
+                <img src="images/hero/rio-sugarloaf.jpg" alt="" width="1672" height="941" fetchpriority="high" decoding="async">
+            </picture>
+
+            <!-- Vintage stamps that tilt slowly -->
+            <div class="hero__stamps" aria-hidden="true">
+                <picture class="hero__stamp hero__stamp--plane">
+                    <source media="(max-width: 600px)" srcset="images/stamps/stamp-plane-m.webp" type="image/webp">
+                    <source srcset="images/stamps/stamp-plane.webp" type="image/webp">
+                    <img src="images/stamps/stamp-plane.png" alt="" width="360" height="254" decoding="async" fetchpriority="low">
+                </picture>
+                <picture class="hero__stamp hero__stamp--passport">
+                    <source media="(max-width: 600px)" srcset="images/stamps/stamp-passport-m.webp" type="image/webp">
+                    <source srcset="images/stamps/stamp-passport.webp" type="image/webp">
+                    <img src="images/stamps/stamp-passport.png" alt="" width="360" height="257" decoding="async" fetchpriority="low">
+                </picture>
+            </div>
+
+            <div class="hero__inner">
+                <div class="hero__content">
+                    <p class="hero__eyebrow">
+                        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"><path d="M21 15.5v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0v5l-8 5v2l8-2.5V18l-2 1.5V21l3.5-1 3.5 1v-1.5L13 18v-5z" fill="currentColor"/></svg>
+                        Starting with Brazil
+                    </p>
+
+                    <h1 class="hero__title" id="hero-title">
+                        <span class="hero__title-line">Plan Your Move</span>
+                        <span class="hero__title-accent">Abroad</span>
+                    </h1>
+
+                    <p class="hero__sub">Personalized planning for gap years, sabbaticals, and international relocation, from someone who's already made the move.</p>
+
+                    <ul class="hero__trust">
+                        <li class="hero__trust-item">
+                            <span class="hero__trust-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m8.8 12 2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </span>
+                            <span><strong>Veteran-Founded</strong>Planned with care</span>
+                        </li>
+                        <li class="hero__trust-item">
+                            <span class="hero__trust-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+                            </span>
+                            <span><strong>Living in Brazil</strong>Firsthand experience</span>
+                        </li>
+                        <li class="hero__trust-item">
+                            <span class="hero__trust-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 19.5c.6-3.3 3-5.2 6-5.2s5.4 1.9 6 5.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M15.5 5.2a3 3 0 0 1 0 5.6M17.5 14.6c2 .7 3.2 2.4 3.5 4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                            </span>
+                            <span><strong>Trusted Local Network</strong>Pros on the ground</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Path bar: shortcuts to each service -->
+                <nav class="hero__paths" aria-label="Explore by plan">
+                    <a class="hero__path" href="#gap-year">
+                        <span class="hero__path-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 9.5h17M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                        </span>
+                        <span class="hero__path-text"><strong>Gap Years &amp; Sabbaticals</strong>Time away, with a plan</span>
+                    </a>
+                    <a class="hero__path" href="#relocation-planning">
+                        <span class="hero__path-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 12h17M12 3.5c2.4 2.4 3.5 5.3 3.5 8.5s-1.1 6.1-3.5 8.5c-2.4-2.4-3.5-5.3-3.5-8.5S9.6 5.9 12 3.5z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+                        </span>
+                        <span class="hero__path-text"><strong>Relocation Planning</strong>A plan built around you</span>
+                    </a>
+                    <a class="hero__path" href="#consulting-packages">
+                        <span class="hero__path-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24"><rect x="3.5" y="7" width="17" height="12.5" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3.5 12.5h17" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+                        </span>
+                        <span class="hero__path-text"><strong>Consulting Packages</strong>Support from start to finish</span>
+                    </a>
+                    <a class="btn btn--secondary hero__paths-btn" href="#services">
+                        Explore Our Services
+                        <svg class="btn__arrow" aria-hidden="true" width="18" height="18" viewBox="0 0 18 18"><path d="M3 9h12m-4.5-4.5L15 9l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Wave divider into the About section -->
+            <svg class="section-divider hero__divider" aria-hidden="true" viewBox="0 0 1000 100" preserveAspectRatio="none"><g fill="currentColor"><path d="M0 1v99c134.3 0 153.7-99 296-99H0Z" opacity=".5"/><path d="M1000 4v86C833.3 90 833.3 3.6 666.7 3.6S500 90 333.3 90 166.7 4 0 4h1000Z" opacity=".5"/><path d="M617 1v86C372 119 384 1 196 1h421Z" opacity=".5"/><path d="M1000 0H0v52C62.5 28 125 4 250 4c250 0 250 96 500 96 125 0 187.5-24 250-48V0Z"/></g></svg>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- About -->
+        <!-- ============================================ -->
+        <section class="about" id="about" aria-labelledby="about-title">
+            <div class="about__inner">
+                <!-- Heading sits above the photos on phones, beside them on desktop -->
+                <div class="about__header">
+                    <p class="section-eyebrow">Meet the Founder</p>
+                    <h2 class="about__title" id="about-title">Hi, I'm Aahniyah. <span>This all started with my own move.</span></h2>
+                </div>
+
+                <!-- Polaroid collage -->
+                <div class="about__collage">
+                    <figure class="polaroid polaroid--main">
+                        <picture>
+                            <source media="(max-width: 600px)" srcset="images/about/aahniyah-portrait-m.webp" type="image/webp">
+                            <source srcset="images/about/aahniyah-portrait.webp" type="image/webp">
+                            <img class="polaroid__photo" src="images/about/aahniyah-portrait.jpg" alt="Aahniyah, the founder, sipping coffee at a café" width="800" height="1000" loading="lazy" decoding="async">
+                        </picture>
+                    </figure>
+
+                    <figure class="polaroid polaroid--small">
+                        <picture>
+                            <source media="(max-width: 600px)" srcset="images/about/aahniyah-rio-m.webp" type="image/webp">
+                            <source srcset="images/about/aahniyah-rio.webp" type="image/webp">
+                            <img class="polaroid__photo" src="images/about/aahniyah-rio.jpg" alt="Aahniyah looking out over Rio de Janeiro" width="560" height="560" loading="lazy" decoding="async">
+                        </picture>
+                    </figure>
+
+                    <!-- Postmark badge with her tagline -->
+                    <svg class="about__badge" aria-hidden="true" viewBox="0 0 200 200" width="200" height="200">
+                        <circle cx="100" cy="100" r="98" fill="currentColor"/>
+                        <circle cx="100" cy="100" r="86" fill="none" stroke="#fff8ec" stroke-width="1.5" stroke-dasharray="3 5"/>
+                        <!-- Each letter sits at its own angle so the ring closes evenly in every browser -->
+                        <g class="about__badge-text" font-size="16" font-weight="600" text-anchor="middle" fill="#fff8ec">
+                            <text x="100" y="31" transform="rotate(0.0 100 100)">G</text>
+                            <text x="100" y="31" transform="rotate(12.4 100 100)">O</text>
+                            <text x="100" y="31" transform="rotate(37.2 100 100)">S</text>
+                            <text x="100" y="31" transform="rotate(49.7 100 100)">O</text>
+                            <text x="100" y="31" transform="rotate(62.1 100 100)">M</text>
+                            <text x="100" y="31" transform="rotate(74.5 100 100)">E</text>
+                            <text x="100" y="31" transform="rotate(86.9 100 100)">W</text>
+                            <text x="100" y="31" transform="rotate(99.3 100 100)">H</text>
+                            <text x="100" y="31" transform="rotate(111.7 100 100)">E</text>
+                            <text x="100" y="31" transform="rotate(124.1 100 100)">R</text>
+                            <text x="100" y="31" transform="rotate(136.6 100 100)">E</text>
+                            <text x="100" y="31" transform="rotate(161.4 100 100)">•</text>
+                            <text x="100" y="31" transform="rotate(186.2 100 100)">S</text>
+                            <text x="100" y="31" transform="rotate(198.6 100 100)">T</text>
+                            <text x="100" y="31" transform="rotate(211.0 100 100)">A</text>
+                            <text x="100" y="31" transform="rotate(223.4 100 100)">Y</text>
+                            <text x="100" y="31" transform="rotate(248.3 100 100)">A</text>
+                            <text x="100" y="31" transform="rotate(260.7 100 100)">W</text>
+                            <text x="100" y="31" transform="rotate(273.1 100 100)">H</text>
+                            <text x="100" y="31" transform="rotate(285.5 100 100)">I</text>
+                            <text x="100" y="31" transform="rotate(297.9 100 100)">L</text>
+                            <text x="100" y="31" transform="rotate(310.3 100 100)">E</text>
+                            <text x="100" y="31" transform="rotate(335.2 100 100)">•</text>
+                        </g>
+                        <path d="M131 112v-6l-24-15V77a4.5 4.5 0 0 0-9 0v14l-24 15v6l24-7.5V119l-6 4.5v4.5l10.5-3 10.5 3v-4.5l-6-4.5v-14.5z" fill="#fff8ec"/>
+                    </svg>
+
+                    <picture class="about__stamp" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="images/stamps/stamp-flower-m.webp" type="image/webp">
+                        <source srcset="images/stamps/stamp-flower.webp" type="image/webp">
+                        <img src="images/stamps/stamp-flower.png" alt="" width="360" height="254" loading="lazy" decoding="async">
+                    </picture>
+                </div>
+
+                <div class="about__content">
+                    <p class="about__text">In 2025, I took a <strong>gap year to travel the world</strong>, explore new cultures, and figure out where I could see myself settling down. I vlogged along the way, not as a tourist, but to understand <strong>what everyday life actually felt like</strong> in each country. What started as a search for my forever home turned into hopping from country to country and falling in love with <strong>the freedom of living abroad</strong>.</p>
+
+                    <p class="about__text">Eventually, I <strong>established residency in Brazil</strong>, now my part-time home. Going through it myself taught me how hard it can be to navigate unfamiliar systems, find reliable information, and connect with the right people, and I built <strong>relationships with professionals who can make the move easier for you</strong>.</p>
+
+                    <div class="about__details">
+                        <ul class="about__list">
+                            <li>Gap year across multiple countries</li>
+                            <li>Residency established in Brazil</li>
+                            <li>Everyday life abroad, documented</li>
+                            <li>A trusted network of local pros</li>
+                        </ul>
+
+                        <!-- Mini boarding pass -->
+                        <div class="about__ticket">
+                            <div class="about__ticket-main">
+                                <p class="about__ticket-label">Now calling</p>
+                                <p class="about__ticket-place">Brazil</p>
+                                <p class="about__ticket-note">my part-time home</p>
+                            </div>
+                            <div class="about__ticket-stub" aria-hidden="true">
+                                <svg width="22" height="22" viewBox="0 0 24 24"><path d="M21 15.5v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0v5l-8 5v2l8-2.5V18l-2 1.5V21l3.5-1 3.5 1v-1.5L13 18v-5z" fill="currentColor"/></svg>
+                                <span>BRA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <figure class="about__mission">
+                        <svg class="about__mission-icon" aria-hidden="true" width="40" height="32" viewBox="0 0 40 32"><path d="M0 32V19.2C0 8.6 5.1 2.2 15.4 0l2 4.3C11.6 6.1 8.7 9.6 8.4 14.9H16V32H0zm22 0V19.2C22 8.6 27.1 2.2 37.4 0l2 4.3c-5.8 1.8-8.7 5.3-9 10.6H38V32H22z" fill="currentColor"/></svg>
+                        <blockquote>
+                            <p>My goal is to make moving abroad feel less intimidating and more achievable, so you can experience the world and find a place that truly feels like home.</p>
+                        </blockquote>
+                        <figcaption>Aahniyah, Founder</figcaption>
+                    </figure>
+
+                    <a class="btn btn--primary" href="#book">
+                        Book a Consultation
+                        <svg class="btn__arrow" aria-hidden="true" width="18" height="18" viewBox="0 0 18 18"><path d="M3 9h12m-4.5-4.5L15 9l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Wave divider into Services -->
+            <svg class="section-divider about__divider" aria-hidden="true" viewBox="0 0 1000 100" preserveAspectRatio="none"><g fill="currentColor"><path d="M0 1v99c134.3 0 153.7-99 296-99H0Z" opacity=".5"/><path d="M1000 4v86C833.3 90 833.3 3.6 666.7 3.6S500 90 333.3 90 166.7 4 0 4h1000Z" opacity=".5"/><path d="M617 1v86C372 119 384 1 196 1h421Z" opacity=".5"/><path d="M1000 0H0v52C62.5 28 125 4 250 4c250 0 250 96 500 96 125 0 187.5-24 250-48V0Z"/></g></svg>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- Services -->
+        <!-- ============================================ -->
+        <section class="services" id="services" aria-labelledby="services-title">
+            <div class="services__inner">
+                <div class="services__header">
+                    <picture class="services__stamp" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="images/stamps/stamp-luggage-m.webp" type="image/webp">
+                        <source srcset="images/stamps/stamp-luggage.webp" type="image/webp">
+                        <img src="images/stamps/stamp-luggage.png" alt="" width="360" height="257" loading="lazy" decoding="async">
+                    </picture>
+
+                    <p class="services__eyebrow">How I Can Help</p>
+                    <h2 class="services__title" id="services-title">Choose Your <span>Path Abroad</span></h2>
+                    <p class="services__intro">Whether you're taking time away or making the move for good, every plan is built around your goals, your timeline, and the life you want abroad.</p>
+
+                    <ol class="services__steps" aria-label="How it works">
+                        <li class="services__step">
+                            <strong>Tell me your plans</strong>
+                            <span>Fill out a short questionnaire</span>
+                        </li>
+                        <li class="services__step">
+                            <strong>Let's talk</strong>
+                            <span>We meet for a consultation call</span>
+                        </li>
+                        <li class="services__step">
+                            <strong>Get your plan</strong>
+                            <span>A package built around you</span>
+                        </li>
+                    </ol>
+
+                    <a class="btn btn--primary services__cta" href="#book">
+                        Book a Consultation
+                        <svg class="btn__arrow" aria-hidden="true" width="18" height="18" viewBox="0 0 18 18"><path d="M3 9h12m-4.5-4.5L15 9l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+
+                <!-- 3D carousel: the center card is active, the others tilt away behind it -->
+                <div class="services__carousel" aria-roledescription="carousel" aria-label="Services">
+                    <!-- Backdrop: a warm sun disc and a dotted flight path behind the cards -->
+                    <div class="services__backdrop" aria-hidden="true">
+                        <span class="services__sun"></span>
+                        <svg class="services__route" viewBox="0 0 600 400" preserveAspectRatio="none"><path d="M10 330C120 180 230 360 330 230S520 40 590 90" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="2 11" stroke-linecap="round"/></svg>
+                    </div>
+
+                    <div class="services__stage">
+                        <article class="service-card" id="relocation-planning" aria-roledescription="slide" aria-label="1 of 3">
+                            <picture>
+                                <source media="(max-width: 600px)" srcset="images/services/relocation-planning-m.webp" type="image/webp">
+                                <source srcset="images/services/relocation-planning.webp" type="image/webp">
+                                <img class="service-card__img" src="images/services/relocation-planning.jpg" alt="Aahniyah resting on a rock above the Rio coastline" width="640" height="800" loading="lazy" decoding="async">
+                            </picture>
+                            <span class="service-card__icon" aria-hidden="true"><svg viewBox="0 0 48 48" width="48" height="48"><circle cx="24" cy="27" r="15" fill="#e3a23b"/><circle cx="24" cy="22" r="13" fill="#fff8ec" stroke="#6a1a3a" stroke-width="2.4"/><path d="M11 22h26M24 9c4.2 3.6 6.2 8 6.2 13s-2 9.4-6.2 13M24 9c-4.2 3.6-6.2 8-6.2 13s2 9.4 6.2 13M13.5 15h21M13.5 29h21" fill="none" stroke="#6a1a3a" stroke-width="2" stroke-linecap="round"/></svg></span>
+                            <div class="service-card__body">
+                                <ul class="service-card__tags">
+                                    <li>Brazil-focused</li>
+                                    <li>1:1 planning</li>
+                                </ul>
+                                <h3 class="service-card__title">Personalized Relocation Planning</h3>
+                                <p class="service-card__text">A step-by-step plan for your move abroad, built around your goals, budget, and timeline.</p>
+                                <a class="service-card__btn" href="#book">Start Planning</a>
+                            </div>
+                        </article>
+
+                        <article class="service-card" id="consulting-packages" aria-roledescription="slide" aria-label="2 of 3">
+                            <picture>
+                                <source media="(max-width: 600px)" srcset="images/services/consulting-packages-m.webp" type="image/webp">
+                                <source srcset="images/services/consulting-packages.webp" type="image/webp">
+                                <img class="service-card__img" src="images/services/consulting-packages.jpg" alt="Aahniyah smiling at a garden lookout" width="640" height="800" loading="lazy" decoding="async">
+                            </picture>
+                            <span class="service-card__icon" aria-hidden="true"><svg viewBox="0 0 48 48" width="48" height="48"><circle cx="24" cy="30" r="14" fill="#e3a23b"/><path d="M23 8h2.6v34H23z" fill="#6a1a3a"/><path d="M13 12h20l4 3.5-4 3.5H13z" fill="#b8461b"/><path d="M35 22H15l-4 3.5 4 3.5h20z" fill="#6a1a3a"/><path d="M16 15.5h12M19 25.5h12" stroke="#fff8ec" stroke-width="1.2" stroke-linecap="round" opacity=".6"/></svg></span>
+                            <div class="service-card__body">
+                                <ul class="service-card__tags">
+                                    <li>Start to finish</li>
+                                    <li>Local network</li>
+                                </ul>
+                                <h3 class="service-card__title">Relocation Consulting Packages</h3>
+                                <p class="service-card__text">Guided support from your first questions to settling in, with trusted local professionals when you need them.</p>
+                                <a class="service-card__btn" href="#book">View Packages</a>
+                            </div>
+                        </article>
+
+                        <article class="service-card" id="gap-year" aria-roledescription="slide" aria-label="3 of 3">
+                            <picture>
+                                <source media="(max-width: 600px)" srcset="images/services/gap-year-m.webp" type="image/webp">
+                                <source srcset="images/services/gap-year.webp" type="image/webp">
+                                <img class="service-card__img" src="images/services/gap-year.jpg" alt="Aahniyah looking down into a green river canyon" width="640" height="800" loading="lazy" decoding="async">
+                            </picture>
+                            <span class="service-card__icon" aria-hidden="true"><svg viewBox="0 0 48 48" width="48" height="48"><path d="M6 38a18 18 0 0 1 36 0z" fill="#e3a23b"/><path d="M8 38c5-4 9-5 14-3s9 1 12-2 6-3 8-1v6z" fill="#b8461b"/><path d="M25 38c0-8 1-15 4-21" fill="none" stroke="#6a1a3a" stroke-width="2.6" stroke-linecap="round"/><path d="M29 17c-3-4-8-5-13-3 4 0 8 1 13 3zm0 0c-1-5-5-8-10-8 4 2 7 4 10 8zm0 0c2-5 6-7 11-6-4 1-8 3-11 6zm0 0c4-2 9-1 12 3-4-1-8-2-12-3zm0 0c-4 1-7 4-8 8 2-3 5-6 8-8z" fill="#6a1a3a" stroke="#6a1a3a" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+                            <div class="service-card__body">
+                                <ul class="service-card__tags">
+                                    <li>3–12+ months</li>
+                                    <li>Multi-country</li>
+                                </ul>
+                                <h3 class="service-card__title">Gap Year &amp; Sabbatical Planning</h3>
+                                <p class="service-card__text">Strategic, stress-free planning for extended time abroad, so you can explore with a plan.</p>
+                                <a class="service-card__btn" href="#book">Plan My Time Away</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="services__controls">
+                        <button class="services__arrow" type="button" data-dir="-1" aria-label="Previous service">
+                            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20"><path d="M16 10H4m5-5-5 5 5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+
+                        <!-- Counter and a bar that fills until the next card -->
+                        <div class="services__progress" aria-hidden="true">
+                            <span class="services__count"><span class="services__count-current">01</span> / 03</span>
+                            <span class="services__bar"><span class="services__bar-fill"></span></span>
+                        </div>
+
+                        <button class="services__arrow" type="button" data-dir="1" aria-label="Next service">
+                            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20"><path d="M4 10h12m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+
+                        <button class="services__pause" type="button" aria-pressed="false" aria-label="Pause automatic rotation">
+                            <svg class="services__pause-icon" aria-hidden="true" width="14" height="14" viewBox="0 0 14 14"><path d="M4 2.5v9M10 2.5v9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+                            <svg class="services__play-icon" aria-hidden="true" width="14" height="14" viewBox="0 0 14 14"><path d="M4 2.5v9l7.5-4.5z" fill="currentColor"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- Final call to action -->
+        <!-- ============================================ -->
+        <section class="cta" aria-labelledby="cta-title">
+            <!-- Rotating photos from her travels: the first loads with the section, the rest just before they appear -->
+            <div class="cta__bg" aria-hidden="true">
+                <picture class="cta__slide is-active">
+                    <source media="(max-width: 767px)" srcset="images/cta/aahniyah-giraffe-m.webp" type="image/webp">
+                    <source srcset="images/cta/aahniyah-giraffe.webp" type="image/webp">
+                    <img src="images/cta/aahniyah-giraffe.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async">
+                </picture>
+                <picture class="cta__slide">
+                    <source media="(max-width: 767px)" data-srcset="images/cta/aahniyah-rio-rock-m.webp" type="image/webp">
+                    <source data-srcset="images/cta/aahniyah-rio-rock.webp" type="image/webp">
+                    <img data-src="images/cta/aahniyah-rio-rock.jpg" alt="" width="1280" height="720" decoding="async">
+                </picture>
+                <picture class="cta__slide">
+                    <source media="(max-width: 767px)" data-srcset="images/cta/aahniyah-canyon-m.webp" type="image/webp">
+                    <source data-srcset="images/cta/aahniyah-canyon.webp" type="image/webp">
+                    <img data-src="images/cta/aahniyah-canyon.jpg" alt="" width="1280" height="720" decoding="async">
+                </picture>
+                <picture class="cta__slide">
+                    <source media="(max-width: 767px)" data-srcset="images/cta/aahniyah-maasai-m.webp" type="image/webp">
+                    <source data-srcset="images/cta/aahniyah-maasai.webp" type="image/webp">
+                    <img data-src="images/cta/aahniyah-maasai.jpg" alt="" width="1280" height="720" decoding="async">
+                </picture>
+            </div>
+
+            <!-- Waves hang down from the Services section -->
+            <svg class="section-divider section-divider--top cta__divider-top" aria-hidden="true" viewBox="0 0 1000 100" preserveAspectRatio="none"><g fill="currentColor"><path d="M0 1v99c134.3 0 153.7-99 296-99H0Z" opacity=".5"/><path d="M1000 4v86C833.3 90 833.3 3.6 666.7 3.6S500 90 333.3 90 166.7 4 0 4h1000Z" opacity=".5"/><path d="M617 1v86C372 119 384 1 196 1h421Z" opacity=".5"/><path d="M1000 0H0v52C62.5 28 125 4 250 4c250 0 250 96 500 96 125 0 187.5-24 250-48V0Z"/></g></svg>
+
+            <div class="cta__content">
+                <p class="cta__eyebrow">Your next chapter is waiting</p>
+                <h2 class="cta__title" id="cta-title">Less Dreaming. <span>More Departing.</span></h2>
+                <p class="cta__text">The country you keep daydreaming about doesn't have to stay on your vision board. Let's map out the move, the timeline, and the people who'll help you land, so the only thing left to plan is your first morning abroad.</p>
+                <a class="btn btn--primary cta__btn" href="#book">
+                    Book Your Consultation
+                    <svg class="btn__arrow" aria-hidden="true" width="18" height="18" viewBox="0 0 18 18"><path d="M3 9h12m-4.5-4.5L15 9l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+
+            <button class="cta__pause" type="button" aria-pressed="false" aria-label="Pause background photos">
+                <svg class="cta__pause-icon" aria-hidden="true" width="14" height="14" viewBox="0 0 14 14"><path d="M4 2.5v9M10 2.5v9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+                <svg class="cta__play-icon" aria-hidden="true" width="14" height="14" viewBox="0 0 14 14"><path d="M4 2.5v9l7.5-4.5z" fill="currentColor"/></svg>
+            </button>
+
+            <!-- Waves rise into the Contact section -->
+            <svg class="section-divider cta__divider-bottom" aria-hidden="true" viewBox="0 0 1000 100" preserveAspectRatio="none"><g fill="currentColor"><path d="M0 1v99c134.3 0 153.7-99 296-99H0Z" opacity=".5"/><path d="M1000 4v86C833.3 90 833.3 3.6 666.7 3.6S500 90 333.3 90 166.7 4 0 4h1000Z" opacity=".5"/><path d="M617 1v86C372 119 384 1 196 1h421Z" opacity=".5"/><path d="M1000 0H0v52C62.5 28 125 4 250 4c250 0 250 96 500 96 125 0 187.5-24 250-48V0Z"/></g></svg>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- Contact -->
+        <!-- ============================================ -->
+        <section class="contact" id="contact" aria-labelledby="contact-title">
+            <!-- Snapshots from her travels: a slow, looping strip of polaroids -->
+            <div class="gallery">
+                <div class="gallery__header">
+                    <p class="gallery__eyebrow">Where I've Been</p>
+                    <h2 class="gallery__title">Snapshots From the Road</h2>
+                    <p class="gallery__sub">Real moments from my gap year, from Tokyo streets to Kenyan safaris.</p>
+                </div>
+
+                <div class="gallery__viewport">
+                    <div class="gallery__track">
+                        <ul class="gallery__list" aria-label="Photos from Aahniyah's travels">
+                        <li class="gallery__item">
+                            <picture>
+                                <source srcset="images/gallery/travel-tokyo.webp" type="image/webp">
+                                <img src="images/gallery/travel-tokyo.jpg" alt="On the streets of Tokyo" width="360" height="360" loading="lazy" decoding="async">
+                            </picture>
+                        </li>
+                        <li class="gallery__item">
+                            <picture>
+                                <source srcset="images/gallery/travel-medellin.webp" type="image/webp">
+                                <img src="images/gallery/travel-medellin.jpg" alt="At the Medellín sign" width="360" height="360" loading="lazy" decoding="async">
+                            </picture>
+                        </li>
+                        <li class="gallery__item">
+                            <picture>
+                                <source srcset="images/gallery/travel-maasai.webp" type="image/webp">
+                                <img src="images/gallery/travel-maasai.jpg" alt="With new friends in traditional Maasai dress" width="360" height="360" loading="lazy" decoding="async">
+                            </picture>
+                        </li>
+                        <li class="gallery__item">
+                            <picture>
+                                <source srcset="images/gallery/travel-dirt-bike-crew.webp" type="image/webp">
+                                <img src="images/gallery/travel-dirt-bike-crew.jpg" alt="With a dirt bike riding crew" width="360" height="360" loading="lazy" decoding="async">
+                            </picture>
+                        </li>
+                        <li class="gallery__item">
+                            <picture>
+                                <source srcset="images/gallery/travel-dirt-bike.webp" type="image/webp">
+                                <img src="images/gallery/travel-dirt-bike.jpg" alt="Suited up for a dirt bike ride" width="360" height="360" loading="lazy" decoding="async">
+                            </picture>
+                        </li>
+                        <li class="gallery__item">
+                            <picture>
+                                <source srcset="images/gallery/travel-boat.webp" type="image/webp">
+                                <img src="images/gallery/travel-boat.jpg" alt="Out on the water on a boat" width="360" height="360" loading="lazy" decoding="async">
+                            </picture>
+                        </li>
+                        <li class="gallery__item">
+                            <picture>
+                                <source srcset="images/gallery/travel-waterfall.webp" type="image/webp">
+                                <img src="images/gallery/travel-waterfall.jpg" alt="At the bottom of a jungle waterfall" width="360" height="360" loading="lazy" decoding="async">
+                            </picture>
+                        </li>
+                        <li class="gallery__item">
+                            <picture>
+                                <source srcset="images/gallery/travel-mirror.webp" type="image/webp">
+                                <img src="images/gallery/travel-mirror.jpg" alt="A mirror selfie on the road" width="360" height="360" loading="lazy" decoding="async">
+                            </picture>
+                        </li>
+                        </ul>
+                        <!-- Copy of the list so the loop has no gap -->
+                        <ul class="gallery__list" aria-hidden="true">
+                        <li class="gallery__item">
+                            <picture>
+                                <source srcset="images/gallery/travel-tokyo.webp" type="image/webp">
+                                <img src="images/gallery/travel-tokyo.jpg" alt="" width="360" height="360" loading="lazy" decoding="async">
+                            </picture>
+                        </li>
+                        <li class="gallery__item">
+                            <picture>
+                                <source srcset="images/gallery/travel-medellin.webp" type="image/webp">
+                                <img src="images/gallery/travel-medellin.jpg" alt="" width="360" height="360" loading="lazy" decoding="async">
+                            </picture>
+                        </li>
+                        <li class="gallery__item">
+                            <picture>
+                                <source srcset="images/gallery/travel-maasai.webp" type="image/webp">
+                                <img src="images/gallery/travel-maasai.jpg" alt="" width="360" height="360" loading="lazy" decoding="async">
+                            </picture>
+                        </li>
+                        <li class="gallery__item">
+                            <picture>
+                                <source srcset="images/gallery/travel-dirt-bike-crew.webp" type="image/webp">
+                                <img src="images/gallery/travel-dirt-bike-crew.jpg" alt="" width="360" height="360" loading="lazy" decoding="async">
+                            </picture>
+                        </li>
+                        <li class="gallery__item">
+                            <picture>
+                                <source srcset="images/gallery/travel-dirt-bike.webp" type="image/webp">
+                                <img src="images/gallery/travel-dirt-bike.jpg" alt="" width="360" height="360" loading="lazy" decoding="async">
+                            </picture>
+                        </li>
+                        <li class="gallery__item">
+                            <picture>
+                                <source srcset="images/gallery/travel-boat.webp" type="image/webp">
+                                <img src="images/gallery/travel-boat.jpg" alt="" width="360" height="360" loading="lazy" decoding="async">
+                            </picture>
+                        </li>
+                        <li class="gallery__item">
+                            <picture>
+                                <source srcset="images/gallery/travel-waterfall.webp" type="image/webp">
+                                <img src="images/gallery/travel-waterfall.jpg" alt="" width="360" height="360" loading="lazy" decoding="async">
+                            </picture>
+                        </li>
+                        <li class="gallery__item">
+                            <picture>
+                                <source srcset="images/gallery/travel-mirror.webp" type="image/webp">
+                                <img src="images/gallery/travel-mirror.jpg" alt="" width="360" height="360" loading="lazy" decoding="async">
+                            </picture>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button class="gallery__pause" type="button" aria-pressed="false" aria-label="Pause photo strip">
+                    <svg class="gallery__pause-icon" aria-hidden="true" width="14" height="14" viewBox="0 0 14 14"><path d="M4 2.5v9M10 2.5v9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+                    <svg class="gallery__play-icon" aria-hidden="true" width="14" height="14" viewBox="0 0 14 14"><path d="M4 2.5v9l7.5-4.5z" fill="currentColor"/></svg>
+                </button>
+            </div>
+
+            <!-- Contact panel over a photo from her safari -->
+            <div class="contact__panel">
+                <picture class="contact__bg" aria-hidden="true">
+                    <source media="(max-width: 767px)" srcset="images/contact/safari-plains-m.webp" type="image/webp">
+                    <source srcset="images/contact/safari-plains.webp" type="image/webp">
+                    <img src="images/contact/safari-plains.jpg" alt="" width="1600" height="1000" loading="lazy" decoding="async">
+                </picture>
+
+                <div class="contact__inner">
+                    <!-- General questions only; consultations go through the questionnaire -->
+                    <form class="contact__form" name="contact" method="post" action="#contact" aria-labelledby="contact-title">
+                        <p class="section-eyebrow">Send a message</p>
+                        <h2 class="contact__title" id="contact-title">Questions? I'd Love to Hear From You</h2>
+
+                        <div class="contact__fields">
+                            <div class="contact__field">
+                                <label for="contact-name">Name</label>
+                                <input id="contact-name" name="name" type="text" autocomplete="name" required>
+                            </div>
+                            <div class="contact__field">
+                                <label for="contact-email">Email</label>
+                                <input id="contact-email" name="email" type="email" autocomplete="email" required>
+                            </div>
+                            <div class="contact__field">
+                                <label for="contact-subject">Subject</label>
+                                <input id="contact-subject" name="subject" type="text">
+                            </div>
+                            <div class="contact__field">
+                                <label for="contact-phone">Phone <span>(optional)</span></label>
+                                <input id="contact-phone" name="phone" type="tel" autocomplete="tel">
+                            </div>
+                            <div class="contact__field contact__field--full">
+                                <label for="contact-message">Message</label>
+                                <textarea id="contact-message" name="message" rows="5" required></textarea>
+                            </div>
+                        </div>
+
+                        <button class="btn btn--primary contact__submit" type="submit">
+                            Send Message
+                            <svg class="btn__arrow" aria-hidden="true" width="18" height="18" viewBox="0 0 18 18"><path d="M3 9h12m-4.5-4.5L15 9l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                    </form>
+
+                    <div class="contact__info">
+                        <p class="contact__info-eyebrow">Need any help?</p>
+                        <h3 class="contact__info-title">Get in Touch</h3>
+                        <p class="contact__info-text">Not ready for a full consultation yet? Send a quick question about gap years, sabbaticals, or moving to Brazil, and I'll point you in the right direction.</p>
+
+                        <ul class="contact__list">
+                            <li class="contact__item">
+                                <span class="contact__icon" aria-hidden="true">
+                                    <svg width="22" height="22" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m3.5 7 8.5 6 8.5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                                </span>
+                                <span><strong>Write an email</strong><!-- PLACEHOLDER: her business email -->[Business email]</span>
+                            </li>
+                            <li class="contact__item">
+                                <span class="contact__icon contact__icon--plum" aria-hidden="true">
+                                    <svg width="22" height="22" viewBox="0 0 24 24"><path d="M14 3v11.2a3.3 3.3 0 1 1-2.8-3.3M14 3c.4 2.7 2.4 4.6 5 4.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </span>
+                                <span><strong>Follow the journey</strong><!-- PLACEHOLDER: her TikTok handle -->TikTok: [@handle]</span>
+                            </li>
+                            <li class="contact__item">
+                                <span class="contact__icon" aria-hidden="true">
+                                    <svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+                                </span>
+                                <span><strong>Based in Brazil</strong>Helping clients around the world</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

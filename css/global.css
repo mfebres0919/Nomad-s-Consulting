@@ -1,0 +1,823 @@
+/* =========================================================
+   A Nomad's Consulting — global styles
+   Fonts, tokens, base, buttons, navigation, accessibility
+   ========================================================= */
+
+/* ---------- Fonts (self-hosted) ---------- */
+@font-face {
+    font-family: 'Shrikhand';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/shrikhand-v17-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/poppins-v24-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/poppins-v24-latin-italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../fonts/poppins-v24-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../fonts/poppins-v24-latin-600.woff2') format('woff2');
+}
+
+/* ---------- Design tokens ---------- */
+:root {
+    /* Brand colors (from the logo) */
+    --plum: #6a1a3a;
+    --plum-deep: #4a1029;
+    --plum-ink: #2e0918;
+    --orange: #b8461b;          /* 5.3:1 behind white text */
+    --orange-dark: #9a3a15;     /* small orange text on tinted pills */
+    --orange-bright: #d9622b;   /* accents only, never behind text */
+    --mustard: #e3a23b;
+    --cream: #fbf0dc;
+    --cream-light: #fff8ec;
+    --sand: #f6e4c6;
+    --white: #ffffff;
+
+    /* Type */
+    --font-display: 'Shrikhand', 'Cooper Black', Georgia, serif;
+    --font-body: 'Poppins', Arial, sans-serif;
+
+    /* Layout */
+    --container: 76rem;
+    --gutter: clamp(1rem, 4vw, 2.5rem);
+    --nav-height: 4.5rem;
+    --topbar-height: 2.5rem;
+    --header-offset: calc(var(--nav-height) + var(--topbar-height));
+    --radius-pill: 999px;
+    --radius: 1rem;
+
+    /* Motion */
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --fill-speed: 650ms;
+    --menu-speed: 520ms;
+}
+
+/* ---------- Reset & base ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--nav-height) + 1rem);
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--plum-ink);
+    background: var(--cream);
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}
+
+a {
+    color: inherit;
+}
+
+button {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+p {
+    margin: 0;
+}
+
+/* ---------- Accessibility utilities ---------- */
+.skip-link {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 200;
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--radius-pill);
+    background: var(--plum-deep);
+    color: var(--white);
+    font-weight: 600;
+    text-decoration: none;
+    transform: translateY(-200%);
+    transition: transform 200ms ease;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+:focus-visible {
+    outline: 3px solid var(--mustard);
+    outline-offset: 3px;
+}
+
+/* ---------- Buttons ----------
+   The hover color rises from the bottom of the button to the top. */
+.btn {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    min-height: 3rem;
+    padding: 0.8rem 1.6rem;
+    border-radius: var(--radius-pill);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    color: var(--white);
+    transition: color var(--fill-speed) var(--ease-out), box-shadow var(--fill-speed) var(--ease-out);
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--btn-fill);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform var(--fill-speed) var(--ease-out);
+}
+
+.btn:hover::before,
+.btn:focus-visible::before {
+    transform: scaleY(1);
+}
+
+.btn--primary {
+    --btn-fill: var(--plum-deep);
+    background: var(--orange);
+    box-shadow: 0 0.5rem 1.25rem rgba(184, 70, 27, 0.28);
+}
+
+.btn--secondary {
+    --btn-fill: var(--orange);
+    background: var(--plum);
+    box-shadow: 0 0.5rem 1.25rem rgba(46, 9, 24, 0.3);
+}
+
+.btn__arrow {
+    flex-shrink: 0;
+    transition: transform var(--fill-speed) var(--ease-out);
+}
+
+.btn:hover .btn__arrow,
+.btn:focus-visible .btn__arrow {
+    transform: translateX(4px);
+}
+
+/* ---------- Section basics (shared by every section) ---------- */
+.section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.85rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--orange);
+}
+
+.section-eyebrow::before {
+    content: "";
+    width: 1.75rem;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+}
+
+/* Wave divider between sections. Sits at the bottom of a section,
+   flipped so the waves rise into it; set `color` to the next
+   section's background. */
+.section-divider {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: clamp(3.5rem, 8vw, 7rem);
+    transform: scaleY(-1);
+    pointer-events: none;
+}
+
+/* At the top of a section, hanging down from the one above */
+.section-divider--top {
+    top: -1px;
+    bottom: auto;
+    transform: none;
+}
+
+/* ---------- Navigation (mobile first) ----------
+   Clear over the hero photo, solid cream once the page scrolls:
+   logo left, links centered, booking button right. */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    isolation: isolate;
+    color: var(--plum-deep);
+}
+
+/* The glass sits on its own layer so the menu and dropdown inside
+   the bar can have their own blur (blurs can't nest) */
+.nav::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-bottom: 1px solid transparent;
+    background: transparent;
+    transition: background 400ms ease, border-color 400ms ease, box-shadow 400ms ease;
+}
+
+.nav.is-scrolled::before,
+.nav.is-open::before {
+    border-bottom-color: rgba(106, 26, 58, 0.1);
+    background: var(--cream-light);
+    box-shadow: 0 0.5rem 1.5rem rgba(46, 9, 24, 0.08);
+}
+
+.nav__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: var(--container);
+    min-height: var(--nav-height);
+    margin: 0 auto;
+    padding: 0.4rem var(--gutter);
+}
+
+.nav__brand {
+    flex-shrink: 0;
+    border-radius: 0.5rem;
+}
+
+.nav__brand img {
+    width: 6.75rem;
+}
+
+/* ---------- Top bar ---------- */
+.topbar {
+    max-height: var(--topbar-height);
+    overflow: hidden;
+    background: var(--plum-deep);
+    color: var(--cream-light);
+    transition: max-height 450ms var(--ease-out), opacity 300ms ease;
+}
+
+/* Tucks away once the page scrolls or the menu opens */
+.nav.is-scrolled .topbar,
+.nav.is-open .topbar {
+    max-height: 0;
+    opacity: 0;
+}
+
+.topbar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: var(--container);
+    height: var(--topbar-height);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    font-size: 0.8rem;
+}
+
+.topbar__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 2rem;
+    text-decoration: none;
+    color: inherit;
+    transition: color 250ms ease;
+}
+
+.topbar__link:hover {
+    color: #ffd59a;
+}
+
+.topbar__note {
+    display: none;
+    align-items: center;
+    gap: 0.4rem;
+    color: #f0d9c4;
+}
+
+.topbar__social {
+    display: flex;
+    gap: 0.25rem;
+}
+
+/* Icon buttons: the hover color rises from the bottom */
+.topbar__icon {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    color: var(--cream-light);
+    transition: color var(--fill-speed) var(--ease-out);
+}
+
+.topbar__icon::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--orange);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform var(--fill-speed) var(--ease-out);
+}
+
+.topbar__icon:hover::before,
+.topbar__icon:focus-visible::before {
+    transform: scaleY(1);
+}
+
+@media (min-width: 768px) {
+    .topbar__note {
+        display: inline-flex;
+    }
+}
+
+/* Hamburger: three lines that turn into an X */
+.nav__toggle {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 2.9rem;
+    height: 2.9rem;
+    border-radius: 50%;
+    background: var(--plum-deep);
+    color: var(--cream-light);
+    transition: background 300ms ease;
+}
+
+.nav__toggle:hover {
+    background: var(--plum);
+}
+
+.nav__bar {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 1.25rem;
+    height: 2px;
+    margin-top: -1px;
+    margin-left: -0.625rem;
+    border-radius: 2px;
+    background: currentColor;
+    transition: transform 420ms var(--ease-out), opacity 260ms ease;
+}
+
+.nav__bar:nth-child(1) {
+    transform: translateY(-6px);
+}
+
+.nav__bar:nth-child(3) {
+    transform: translateY(6px);
+}
+
+.nav.is-open .nav__bar:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+}
+
+.nav.is-open .nav__bar:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0.2);
+}
+
+.nav.is-open .nav__bar:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
+}
+
+/* Mobile menu: a sheet that drops down under the bar */
+.nav__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: calc(100svh - var(--nav-height));
+    overflow-y: auto;
+    padding: 0.75rem var(--gutter) 1.5rem;
+    border-bottom: 1px solid rgba(106, 26, 58, 0.1);
+    border-radius: 0 0 1.5rem 1.5rem;
+    background: var(--cream-light);
+    box-shadow: 0 1.5rem 2.5rem rgba(46, 9, 24, 0.15);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-0.75rem);
+    transition: opacity var(--menu-speed) var(--ease-out), transform var(--menu-speed) var(--ease-out), visibility 0s linear var(--menu-speed);
+}
+
+.nav.is-open .nav__menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0s;
+}
+
+/* Links slide in one after another */
+.nav__item {
+    opacity: 0;
+    transform: translateY(0.75rem);
+    transition: opacity 400ms var(--ease-out), transform 400ms var(--ease-out);
+}
+
+.nav.is-open .nav__item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav.is-open .nav__item:nth-child(1) { transition-delay: 80ms; }
+.nav.is-open .nav__item:nth-child(2) { transition-delay: 140ms; }
+.nav.is-open .nav__item:nth-child(3) { transition-delay: 200ms; }
+.nav.is-open .nav__item:nth-child(4) { transition-delay: 260ms; }
+.nav.is-open .nav__item:nth-child(5) { transition-delay: 320ms; }
+
+.nav__link {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.4rem;
+    width: 100%;
+    min-height: 3rem;
+    padding: 0.7rem 1rem;
+    border-radius: 0.75rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--plum-deep);
+}
+
+/* Same bottom-to-top fill as the buttons, in a soft plum tint */
+.nav__link::before,
+.nav__dropdown-link::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: rgba(106, 26, 58, 0.08);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform var(--fill-speed) var(--ease-out);
+}
+
+.nav__link:hover::before,
+.nav__link:focus-visible::before,
+.nav__dropdown-link:hover::before,
+.nav__dropdown-link:focus-visible::before {
+    transform: scaleY(1);
+}
+
+.nav__chevron {
+    transition: transform 400ms var(--ease-out);
+}
+
+.nav__drop-toggle[aria-expanded="true"] .nav__chevron {
+    transform: rotate(180deg);
+}
+
+/* Services dropdown: an accordion on mobile */
+.nav__dropdown {
+    display: grid;
+    grid-template-rows: 0fr;
+    visibility: hidden;
+    transition: grid-template-rows 480ms var(--ease-out), visibility 0s linear 480ms;
+}
+
+.nav__item--dropdown.is-open .nav__dropdown {
+    grid-template-rows: 1fr;
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+.nav__dropdown-list {
+    min-height: 0;
+    overflow: hidden;
+    padding-left: 0.75rem;
+}
+
+.nav__dropdown-link {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    display: block;
+    padding: 0.65rem 1rem;
+    border-radius: 0.6rem;
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: var(--plum);
+    opacity: 0;
+    transform: translateY(-0.4rem);
+    transition: opacity 360ms var(--ease-out), transform 360ms var(--ease-out);
+}
+
+.nav__item--dropdown.is-open .nav__dropdown-link {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav__item--dropdown.is-open li:nth-child(2) .nav__dropdown-link { transition-delay: 60ms; }
+.nav__item--dropdown.is-open li:nth-child(3) .nav__dropdown-link { transition-delay: 120ms; }
+.nav__item--dropdown.is-open li:nth-child(4) .nav__dropdown-link { transition-delay: 180ms; }
+
+.nav__dropdown-link--all {
+    font-weight: 600;
+    color: var(--orange);
+}
+
+.nav__item--cta {
+    padding-top: 0.75rem;
+}
+
+.nav__item--cta .btn {
+    width: 100%;
+}
+
+/* Active section in the mobile menu: tinted row with an orange edge */
+.nav__indicator {
+    display: none;
+}
+
+.nav__link.is-active {
+    background: rgba(184, 70, 27, 0.1);
+    box-shadow: inset 3px 0 0 var(--orange);
+    font-weight: 600;
+}
+
+/* The bar's own button shows from tablet up; on phones it lives in the menu */
+.nav__cta {
+    display: none;
+}
+
+@media (min-width: 640px) {
+    .nav__cta {
+        display: inline-flex;
+        margin-left: auto;
+    }
+
+    .nav__item--cta {
+        display: none;
+    }
+
+    .nav__brand img {
+        width: 7.5rem;
+    }
+}
+
+/* Desktop: links centered, button on the right */
+@media (min-width: 1024px) {
+    :root {
+        --nav-height: 5.25rem;
+    }
+
+    .nav__inner {
+        gap: 1.5rem;
+    }
+
+    .nav__brand img {
+        width: 8rem;
+    }
+
+    .nav__toggle {
+        display: none;
+    }
+
+    .nav__menu {
+        position: static;
+        max-height: none;
+        overflow: visible;
+        margin: 0 auto;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: none;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+        box-shadow: none;
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .nav__links {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    .nav__item {
+        position: relative;
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .nav__cta {
+        margin-left: 0;
+    }
+
+    .nav__link {
+        width: auto;
+        min-height: 2.75rem;
+        padding: 0.55rem 1rem;
+        border-radius: var(--radius-pill);
+        font-size: 0.95rem;
+    }
+
+    .nav__dropdown {
+        position: absolute;
+        top: calc(100% + 1rem);
+        left: 50%;
+        display: block;
+        width: 18.5rem;
+        padding: 0.6rem;
+        border: 1px solid rgba(106, 26, 58, 0.1);
+        border-radius: 1rem;
+        background: var(--cream-light);
+        box-shadow: 0 1.25rem 2.5rem rgba(46, 9, 24, 0.15);
+        opacity: 0;
+        transform: translate(-50%, 0.6rem);
+        transition: opacity 380ms var(--ease-out), transform 380ms var(--ease-out), visibility 0s linear 380ms;
+    }
+
+    /* Invisible bridge so the pointer can travel from Services into the menu */
+    .nav__dropdown::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -1.1rem;
+        height: 1.1rem;
+    }
+
+    .nav__item--dropdown.is-open .nav__dropdown {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+
+    .nav__dropdown-list {
+        overflow: visible;
+        padding-left: 0;
+    }
+
+    /* The menu is the measuring box for the sliding pill */
+    .nav__menu {
+        position: relative;
+    }
+
+    .nav__links {
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Active section: a soft pill that glides between links */
+    .nav__indicator {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: 0;
+        display: block;
+        width: 0;
+        height: 2.75rem;
+        margin-top: -1.375rem;
+        border-radius: var(--radius-pill);
+        background: rgba(184, 70, 27, 0.11);
+        box-shadow: inset 0 0 0 1px rgba(184, 70, 27, 0.2);
+        opacity: 0;
+        transition:
+            transform 550ms var(--ease-out),
+            width 550ms var(--ease-out),
+            opacity 300ms ease;
+    }
+
+    .nav__indicator.is-visible {
+        opacity: 1;
+    }
+
+    /* Small mustard dot under the pill, like a map pin */
+    .nav__indicator::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -0.55rem;
+        width: 5px;
+        height: 5px;
+        margin-left: -2.5px;
+        border-radius: 50%;
+        background: var(--orange);
+    }
+
+    .nav__link.is-active {
+        background: none;
+        box-shadow: none;
+        color: var(--plum-deep);
+    }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 1ms !important;
+        transition-delay: 0s !important;
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
