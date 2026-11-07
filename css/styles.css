@@ -1872,3 +1872,14 @@ html:not(.js) .contact,
 .services__plane {
     opacity: 0.75;
 }
+
+/* Email link on the photo panel */
+.contact__email {
+    color: inherit;
+    text-underline-offset: 0.2em;
+    overflow-wrap: anywhere;
+}
+
+.contact__email:hover {
+    color: #ffc978;
+}
