@@ -4,8 +4,8 @@
 
 /* ---------- Services carousel ----------
    The center card faces forward and the others tilt back behind it.
-   It advances every 7 seconds, pauses on hover, focus, the pause
-   button, or a hidden tab, and stays still for reduced motion.
+   It advances every 7 seconds, pauses while a card is hovered or
+   focused, with the pause button, or on a hidden tab, and stays still for reduced motion.
    Arrows, swipes, clicking a side card, and the nav's
    Services links all move it. */
 (function () {
@@ -104,24 +104,26 @@
         });
     });
 
-    // Hold still while the visitor is reading or using the controls
-    carousel.addEventListener("mouseenter", function () {
+    // Hold still while the visitor is reading a card. The arrows and
+    // pause button sit outside the cards, so using them restarts the
+    // bar from 0 and keeps it running.
+    stage.addEventListener("mouseenter", function () {
         held = true;
         restart();
     });
 
-    carousel.addEventListener("mouseleave", function () {
+    stage.addEventListener("mouseleave", function () {
         held = false;
         restart();
     });
 
-    carousel.addEventListener("focusin", function () {
+    stage.addEventListener("focusin", function () {
         held = true;
         restart();
     });
 
-    carousel.addEventListener("focusout", function (event) {
-        if (!carousel.contains(event.relatedTarget)) {
+    stage.addEventListener("focusout", function (event) {
+        if (!stage.contains(event.relatedTarget)) {
             held = false;
             restart();
         }

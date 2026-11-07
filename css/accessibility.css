@@ -1,0 +1,294 @@
+/* =========================================================
+   A Nomad's Consulting — accessibility statement page
+   ========================================================= */
+
+/* ---------- Page header (mobile first) ---------- */
+.page-hero {
+    position: relative;
+    padding: calc(var(--header-offset) + 3rem) var(--gutter) 3rem;
+    overflow: hidden;
+    background: var(--sand);
+    text-align: center;
+}
+
+/* Soft sun glow behind the title */
+.page-hero::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    width: min(90vw, 34rem);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(240, 168, 82, 0.35) 0%, rgba(227, 162, 59, 0) 68%);
+    transform: translate(-50%, -50%);
+}
+
+.page-hero__inner {
+    position: relative;
+    max-width: 44rem;
+    margin: 0 auto;
+}
+
+.page-hero .section-eyebrow::after {
+    content: "";
+    width: 1.75rem;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+}
+
+.page-hero__title {
+    margin-bottom: 1rem;
+    font-size: clamp(2.3rem, 8vw, 4rem);
+    color: var(--plum-deep);
+}
+
+.page-hero__text {
+    margin-bottom: 1rem;
+    font-size: clamp(1rem, 3.4vw, 1.1rem);
+    line-height: 1.75;
+    color: #4a2a36;
+}
+
+.page-hero__date {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--orange-dark);
+}
+
+/* ---------- Statement layout ---------- */
+.statement {
+    display: grid;
+    gap: 2rem;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: clamp(2.5rem, 6vw, 4.5rem) var(--gutter) clamp(4rem, 9vw, 6rem);
+}
+
+/* On this page */
+.statement__toc {
+    padding: 1.25rem 1.5rem;
+    border-radius: 1.25rem;
+    background: var(--cream-light);
+    box-shadow: 0 0.75rem 1.75rem rgba(46, 9, 24, 0.06);
+}
+
+.statement__toc-title {
+    margin-bottom: 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--orange-dark);
+}
+
+.statement__toc ul {
+    display: grid;
+    gap: 0.25rem;
+}
+
+.statement__toc a {
+    display: block;
+    padding: 0.45rem 0.75rem;
+    border-left: 2px solid rgba(106, 26, 58, 0.15);
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: var(--plum-deep);
+    transition: border-color 300ms ease, background 300ms ease;
+}
+
+.statement__toc a:hover,
+.statement__toc a:focus-visible {
+    border-left-color: var(--orange);
+    background: rgba(184, 70, 27, 0.07);
+}
+
+.statement__body {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.statement__card {
+    padding: clamp(1.5rem, 4vw, 2.25rem);
+    border-radius: 1.25rem;
+    background: var(--cream-light);
+    box-shadow: 0 0.75rem 1.75rem rgba(46, 9, 24, 0.06);
+    scroll-margin-top: calc(var(--nav-height) + 1.5rem);
+}
+
+.statement__card h2 {
+    margin-bottom: 1rem;
+    font-size: clamp(1.6rem, 5vw, 2.1rem);
+    color: var(--plum-deep);
+}
+
+.statement__card h3 {
+    margin: 1.5rem 0 0.5rem;
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--plum);
+}
+
+.statement__card p {
+    margin-bottom: 0.9rem;
+    line-height: 1.75;
+    color: #4a2a36;
+}
+
+.statement__card p:last-child {
+    margin-bottom: 0;
+}
+
+.statement__card strong {
+    font-weight: 600;
+    color: var(--plum-deep);
+}
+
+.statement__card a,
+.statement__note a {
+    color: var(--orange-dark);
+    text-underline-offset: 0.2em;
+}
+
+.statement__badge {
+    display: inline-block;
+    padding: 0.35rem 0.9rem;
+    border-radius: var(--radius-pill);
+    background: rgba(227, 162, 59, 0.22);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--plum-deep);
+}
+
+/* Checklist with orange ticks */
+.statement__list {
+    display: grid;
+    gap: 0.7rem;
+}
+
+.statement__list li {
+    position: relative;
+    padding-left: 2rem;
+    line-height: 1.65;
+    color: #4a2a36;
+}
+
+.statement__list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    background: var(--orange) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='m3 6.2 2 2 4-4.4' fill='none' stroke='%23fff8ec' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / 0.8rem;
+}
+
+/* Known limitations */
+.statement__limits {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+
+.statement__limit {
+    padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+    border-left: 4px solid var(--mustard);
+    border-radius: 0 1rem 1rem 0;
+    background: #f8ecd8;
+}
+
+.statement__limit h3 {
+    margin-top: 0;
+}
+
+.statement__limit p {
+    margin-bottom: 0.5rem;
+}
+
+/* Technology tags */
+.statement__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.statement__tags li {
+    padding: 0.35rem 0.9rem;
+    border: 1px solid rgba(106, 26, 58, 0.2);
+    border-radius: var(--radius-pill);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--plum-deep);
+}
+
+/* Feedback card stands out in plum */
+.statement__card--feature {
+    background: var(--plum-deep);
+}
+
+.statement__card--feature h2,
+.statement__card--feature h3,
+.statement__card--feature strong {
+    color: var(--cream-light);
+}
+
+.statement__card--feature p {
+    color: #f0d9c4;
+}
+
+.statement__card--feature a {
+    color: #ffc978;
+}
+
+.statement__contact {
+    display: grid;
+    gap: 0.75rem;
+    margin: 1.25rem 0 0.5rem;
+}
+
+.statement__contact li {
+    display: grid;
+    gap: 0.15rem;
+    padding: 0.9rem 1.1rem;
+    border-radius: 0.9rem;
+    background: rgba(255, 248, 236, 0.08);
+}
+
+.statement__contact-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #ffd59a;
+}
+
+.statement__note {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: #5e3b48;
+}
+
+/* ---------- Desktop: sticky contents beside the statement ---------- */
+@media (min-width: 1024px) {
+    .statement {
+        grid-template-columns: 15rem minmax(0, 1fr);
+        align-items: start;
+        gap: 3rem;
+    }
+
+    .statement__toc {
+        position: sticky;
+        top: calc(var(--nav-height) + 2rem);
+    }
+
+    .statement__body {
+        max-width: 50rem;
+    }
+
+    .statement__limits {
+        grid-template-columns: 1fr 1fr;
+    }
+}

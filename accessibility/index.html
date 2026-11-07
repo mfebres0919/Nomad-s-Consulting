@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accessibility Statement | A Nomad's Consulting</title>
+    <meta name="description" content="Our commitment to an accessible website: the WCAG 2.2 AA standard we follow, known limitations, and how to reach us with accessibility feedback.">
+    <meta name="theme-color" content="#fbf0dc">
+    <link rel="canonical" href="https://mfebres0919.github.io/Nomad-s-Consulting/accessibility/">
+    <link rel="icon" href="../favicon.png" type="image/png" sizes="48x48">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+
+    <link rel="preload" href="../fonts/shrikhand-v17-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/poppins-v24-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Approved exception (handbook Section 3): tiny head script so fade-ins start hidden -->
+    <script src="../javascript/reveal-init.js"></script>
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/accessibility.css">
+
+    <script defer src="../javascript/vendor/lenis.min.js"></script>
+    <script defer src="../javascript/global.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="../#main">Skip to main content</a>
+
+    <!-- ============================================ -->
+    <!-- Navigation -->
+    <!-- ============================================ -->
+    <header class="nav" id="nav">
+        <!-- Top bar: email and socials (tucks away on scroll) -->
+        <div class="topbar">
+            <div class="topbar__inner">
+                <!-- PLACEHOLDER: her business email -->
+                <a class="topbar__link" href="mailto:hello@example.com">
+                    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m3.5 7 8.5 6 8.5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                    <span>hello@example.com</span>
+                </a>
+
+                <p class="topbar__note">
+                    <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+                    Currently in Brazil
+                </p>
+
+                <!-- PLACEHOLDER: swap # for her real profile links -->
+                <ul class="topbar__social">
+                    <li><a class="topbar__icon" href="#"><span class="visually-hidden">TikTok</span><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"><path d="M14 3v11.2a3.3 3.3 0 1 1-2.8-3.3M14 3c.4 2.7 2.4 4.6 5 4.8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                    <li><a class="topbar__icon" href="#"><span class="visually-hidden">Instagram</span><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3.8" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></li>
+                    <li><a class="topbar__icon" href="#"><span class="visually-hidden">YouTube</span><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m10 9.2 5 2.8-5 2.8z" fill="currentColor"/></svg></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="nav__inner">
+            <a class="nav__brand" href="../">
+                <span class="visually-hidden">A Nomad's Consulting home</span>
+                <picture>
+                    <source srcset="../images/brand/logo-sm.webp" type="image/webp">
+                    <img src="../images/brand/logo-sm.png" alt="" width="300" height="182" decoding="async">
+                </picture>
+            </a>
+
+            <nav class="nav__menu" id="nav-menu" aria-label="Main">
+                <!-- Pill that slides behind the active link (desktop) -->
+                <span class="nav__indicator" aria-hidden="true"></span>
+                <ul class="nav__links">
+                    <li class="nav__item"><a class="nav__link" href="../">Home</a></li>
+                    <li class="nav__item"><a class="nav__link" href="../#about">About</a></li>
+                    <li class="nav__item nav__item--dropdown">
+                        <button class="nav__link nav__drop-toggle" type="button" aria-expanded="false" aria-controls="services-menu">
+                            Services
+                            <svg class="nav__chevron" aria-hidden="true" width="12" height="12" viewBox="0 0 12 12"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="nav__dropdown" id="services-menu">
+                            <ul class="nav__dropdown-list">
+                                <li><a class="nav__dropdown-link" href="../#relocation-planning">Personalized Relocation Planning</a></li>
+                                <li><a class="nav__dropdown-link" href="../#consulting-packages">Relocation Consulting Packages</a></li>
+                                <li><a class="nav__dropdown-link" href="../#gap-year">Gap Year &amp; Sabbatical Planning</a></li>
+                                <li><a class="nav__dropdown-link nav__dropdown-link--all" href="../#services">View all services</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav__item"><a class="nav__link" href="../#contact">Contact</a></li>
+                    <li class="nav__item nav__item--cta"><a class="btn btn--primary" href="../#book">Book a Consultation</a></li>
+                </ul>
+            </nav>
+
+            <a class="btn btn--primary nav__cta" href="../#book">Book a Consultation</a>
+
+            <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+                <span class="nav__bar"></span>
+                <span class="nav__bar"></span>
+                <span class="nav__bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- ============================================ -->
+        <!-- Page header -->
+        <!-- ============================================ -->
+        <header class="page-hero" id="top">
+            <div class="page-hero__inner">
+                <p class="section-eyebrow" data-reveal="down">Our Commitment</p>
+                <h1 class="page-hero__title" data-reveal="up" data-reveal-delay="1">Accessibility Statement</h1>
+                <p class="page-hero__text" data-reveal="up" data-reveal-delay="2">A Nomad's Consulting wants everyone to be able to explore their options for living and traveling abroad, including people with disabilities. This statement explains how we work toward that and how to reach us if something gets in your way.</p>
+                <p class="page-hero__date" data-reveal="up" data-reveal-delay="3">Last updated: <time datetime="2026-11-07">November 7, 2026</time></p>
+            </div>
+        </header>
+
+        <div class="statement">
+            <!-- On this page -->
+            <nav class="statement__toc" aria-label="On this page" data-reveal="left">
+                <p class="statement__toc-title">On this page</p>
+                <ul>
+                    <li><a href="#standard">Our standard</a></li>
+                    <li><a href="#status">Conformance status</a></li>
+                    <li><a href="#efforts">Our efforts</a></li>
+                    <li><a href="#limitations">Known limitations</a></li>
+                    <li><a href="#technical">Technical details</a></li>
+                    <li><a href="#feedback">Feedback &amp; contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="statement__body">
+                <section class="statement__card" id="standard" aria-labelledby="standard-title" data-reveal="up">
+                    <h2 id="standard-title">Our standard</h2>
+                    <p>This statement covers the website <strong>A Nomad's Consulting</strong> at <a href="https://mfebres0919.github.io/Nomad-s-Consulting/">mfebres0919.github.io/Nomad-s-Consulting</a>.</p>
+                    <p>We aim to meet the <strong>Web Content Accessibility Guidelines (WCAG) 2.2, Level AA</strong>. These guidelines explain how to make web content easier to use for people with disabilities, including people who are blind or have low vision, are deaf or hard of hearing, or have motor, cognitive, or learning disabilities. Meeting them also makes the site easier for everyone to use.</p>
+                </section>
+
+                <section class="statement__card" id="status" aria-labelledby="status-title" data-reveal="up">
+                    <h2 id="status-title">Conformance status</h2>
+                    <p class="statement__badge">Partially conformant</p>
+                    <p>This website is <strong>partially conformant</strong> with WCAG 2.2 Level AA. That means most of the content meets the standard, but some parts do not yet fully conform. Those parts are listed under <a href="#limitations">Known limitations</a>.</p>
+                </section>
+
+                <section class="statement__card" id="efforts" aria-labelledby="efforts-title" data-reveal="up">
+                    <h2 id="efforts-title">Our efforts</h2>
+                    <p>We take the following steps to support accessibility:</p>
+                    <ul class="statement__list">
+                        <li>Accessibility is part of how the site is designed and built from the start, not added afterward.</li>
+                        <li>Text and buttons meet color contrast requirements, and text can be zoomed to 200% without losing content.</li>
+                        <li>Every feature can be used with a keyboard alone, with a visible focus outline and a "Skip to main content" link.</li>
+                        <li>Images include text descriptions, and decorative images are hidden from screen readers.</li>
+                        <li>Moving content, such as the photo slideshows and the services carousel, can be paused, and animation is reduced for visitors who turn on "reduce motion" in their device settings.</li>
+                        <li>Form fields have visible labels, and errors are explained in text.</li>
+                        <li>We test pages with automated tools and by hand, and review accessibility whenever the site changes.</li>
+                    </ul>
+                </section>
+
+                <section class="statement__card" id="limitations" aria-labelledby="limitations-title" data-reveal="up">
+                    <h2 id="limitations-title">Known limitations</h2>
+                    <p>Despite our efforts, some content may not yet be fully accessible. Here's what we know about and what we're doing:</p>
+
+                    <div class="statement__limits">
+                        <div class="statement__limit">
+                            <h3>Third-party forms and booking tools</h3>
+                            <p><strong>Issue:</strong> Our consultation questionnaire and booking tools are provided by outside services and may not fully meet WCAG 2.2 AA.</p>
+                            <p><strong>Why:</strong> We can't fully control the code of tools we don't build.</p>
+                            <p><strong>What we're doing:</strong> We choose providers that support accessibility and test their forms before launch.</p>
+                            <p><strong>In the meantime:</strong> Email us and we'll complete the questionnaire with you by email or phone.</p>
+                        </div>
+
+                        <div class="statement__limit">
+                            <h3>Travel photos</h3>
+                            <p><strong>Issue:</strong> Some personal travel photos are described briefly and may not capture every detail.</p>
+                            <p><strong>What we're doing:</strong> We review image descriptions whenever new photos are added.</p>
+                            <p><strong>In the meantime:</strong> Contact us if a photo's description isn't helpful, and we'll improve it.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="statement__card" id="technical" aria-labelledby="technical-title" data-reveal="up">
+                    <h2 id="technical-title">Technical details</h2>
+
+                    <h3>Compatibility</h3>
+                    <p>This website is designed to work with recent versions of Chrome, Safari, Firefox, and Edge on desktop and mobile, along with common assistive technologies such as VoiceOver (Mac and iPhone), NVDA (Windows), and TalkBack (Android). It may not work as well in browsers more than three major versions old.</p>
+
+                    <h3>Technologies used</h3>
+                    <p>Accessibility on this site relies on the following technologies working with your browser and any assistive technology you use:</p>
+                    <ul class="statement__tags">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>WAI-ARIA</li>
+                        <li>SVG</li>
+                    </ul>
+
+                    <h3>How we assessed this site</h3>
+                    <p>We evaluated this website through <strong>self-evaluation</strong>: automated testing with Google Lighthouse and axe, plus manual checks of keyboard navigation, screen reader behavior, color contrast, zoom, and reduced-motion settings.</p>
+                </section>
+
+                <section class="statement__card statement__card--feature" id="feedback" aria-labelledby="feedback-title" data-reveal="up">
+                    <h2 id="feedback-title">Feedback &amp; contact</h2>
+                    <p>We welcome your feedback. If you run into a barrier on this site, or need information in a different format, please let us know. We aim to respond within <strong>2 business days</strong>.</p>
+
+                    <ul class="statement__contact">
+                        <li>
+                            <span class="statement__contact-label">Email</span>
+                            <!-- PLACEHOLDER: her business email -->
+                            <a href="mailto:hello@example.com">hello@example.com</a>
+                        </li>
+                        <li>
+                            <span class="statement__contact-label">Contact form</span>
+                            <a href="../#contact">Send a message from our homepage</a>
+                        </li>
+                    </ul>
+
+                    <h3>Formal complaints</h3>
+                    <p>If you are not satisfied with our response, please email us with "Accessibility complaint" in the subject line. The founder reviews every accessibility complaint personally and will reply with how we plan to resolve it.</p>
+                </section>
+
+                <p class="statement__note" data-reveal="up">This statement was created on November 7, 2026, using the <a href="https://www.w3.org/WAI/planning/statements/generator/">W3C Accessibility Statement Generator</a>. A Nomad's Consulting provides travel and relocation planning, not legal or immigration advice.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- ============================================ -->
+    <!-- Footer -->
+    <!-- ============================================ -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand" data-reveal="up">
+                <a class="footer__logo" href="../">
+                    <span class="visually-hidden">A Nomad's Consulting home</span>
+                    <picture>
+                        <source data-srcset="../images/brand/logo-sm.webp" type="image/webp">
+                        <img data-src="../images/brand/logo-sm.png" alt="" width="300" height="182" decoding="async">
+                    </picture>
+                </a>
+                <p class="footer__tagline">Go somewhere. Stay awhile.</p>
+                <p class="footer__text">Personalized planning for gap years, sabbaticals, and international relocation, starting with Brazil.</p>
+
+                <!-- PLACEHOLDER: swap # for her real profile links -->
+                <ul class="footer__social">
+                    <li><a class="footer__social-link" href="#"><span class="visually-hidden">TikTok</span><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path d="M14 3v11.2a3.3 3.3 0 1 1-2.8-3.3M14 3c.4 2.7 2.4 4.6 5 4.8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+                    <li><a class="footer__social-link" href="#"><span class="visually-hidden">Instagram</span><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3.8" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a></li>
+                    <li><a class="footer__social-link" href="#"><span class="visually-hidden">YouTube</span><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m10 9.2 5 2.8-5 2.8z" fill="currentColor"/></svg></a></li>
+                </ul>
+            </div>
+
+            <nav class="footer__col" aria-label="Footer" data-reveal="up" data-reveal-delay="1">
+                <h2 class="footer__heading">Explore</h2>
+                <ul class="footer__links">
+                    <li><a href="../">Home</a></li>
+                    <li><a href="../#about">About</a></li>
+                    <li><a href="../#services">Services</a></li>
+                    <li><a href="../#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer__col" data-reveal="up" data-reveal-delay="2">
+                <h2 class="footer__heading">Services</h2>
+                <ul class="footer__links">
+                    <li><a href="../#relocation-planning">Personalized Relocation Planning</a></li>
+                    <li><a href="../#consulting-packages">Relocation Consulting Packages</a></li>
+                    <li><a href="../#gap-year">Gap Year &amp; Sabbatical Planning</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col" data-reveal="up" data-reveal-delay="3">
+                <h2 class="footer__heading">Get in Touch</h2>
+                <ul class="footer__links">
+                    <!-- PLACEHOLDER: her business email -->
+                    <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+                    <li>Based in Brazil, helping clients worldwide</li>
+                </ul>
+                <a class="btn btn--primary footer__btn" href="../#book">Book a Consultation</a>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p>&copy; <span class="footer__year">2026</span> A Nomad's Consulting. All rights reserved.</p>
+            <p class="footer__note">We provide travel and relocation planning, not legal or immigration advice.</p>
+            <!-- PLACEHOLDER: link once the privacy policy page exists -->
+            <div class="footer__legal-links">
+                <a class="footer__legal" href="#">Privacy Policy</a>
+                <a class="footer__legal" href="./" aria-current="page">Accessibility</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top: appears after scrolling down -->
+    <a class="back-to-top" href="#top">
+        <span class="visually-hidden">Back to top</span>
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20"><path d="M10 16V4m-5 5 5-5 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+</body>
+</html>
