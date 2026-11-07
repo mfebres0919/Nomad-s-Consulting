@@ -1744,3 +1744,12 @@
         overflow-x: auto;
     }
 }
+
+/* Wave divider from Contact into the footer */
+.contact__divider {
+    color: var(--plum-ink);
+}
+
+.contact {
+    padding-bottom: clamp(7rem, 14vw, 10rem);
+}
