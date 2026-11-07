@@ -1295,7 +1295,7 @@
 /* Pause / play for the rotating photos */
 .cta__pause {
     position: absolute;
-    right: var(--gutter);
+    left: var(--gutter);
     bottom: clamp(4.5rem, 9vw, 7.5rem);
     z-index: 2;
     display: grid;

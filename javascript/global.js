@@ -231,3 +231,31 @@
         year.textContent = new Date().getFullYear();
     }
 })();
+
+/* ---------- Back to top ----------
+   Shows the button once the visitor has scrolled past the first screen. */
+(function () {
+    "use strict";
+
+    var button = document.querySelector(".back-to-top");
+
+    if (!button) {
+        return;
+    }
+
+    var ticking = false;
+
+    function update() {
+        ticking = false;
+        button.classList.toggle("is-visible", window.scrollY > window.innerHeight * 0.6);
+    }
+
+    window.addEventListener("scroll", function () {
+        if (!ticking) {
+            ticking = true;
+            requestAnimationFrame(update);
+        }
+    }, { passive: true });
+
+    update();
+})();

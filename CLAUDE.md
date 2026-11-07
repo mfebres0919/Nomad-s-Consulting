@@ -24,6 +24,7 @@ This file is written for people and for AI coding agents. It lives in the root o
 11. Every page has a unique title, meta description, canonical URL, one `h1` and Open Graph tags.
 12. Never put API keys, passwords, or secrets in front-end code or in the repo.
 13. Reviews, testimonials, stats, and credentials must be real. Never invent them.
+14. Every site has a **back-to-top button** fixed to the bottom-right corner (Section 4).
 
 ---
 
@@ -124,13 +125,28 @@ If a requested feature conflicts with a hard rule, explain the conflict before b
 - Navigation, mobile navigation and footer.
 - Buttons, forms, cards, containers, section spacing, and any component used on more than one page.
 - Accessibility utilities: `.visually-hidden`, `.skip-link`, focus styles, and `prefers-reduced-motion` rules.
+- The back-to-top button (required on every site, see below).
+
+### Back-to-top button (required on every site)
+- A round button fixed to the **bottom-right corner** in the site's accent color, with an upward arrow. It goes on every page, just before `</body>`.
+- It's a link to the top of the page (`href="#top"` pointing at the hero or `<body>` id), so it still works without JavaScript.
+- It's hidden at the top of the page and fades in once the visitor scrolls past about 60% of the first screen. The logic lives in `global.js`.
+- It has hidden link text (`<span class="visually-hidden">Back to top</span>`), a visible focus style, a tap target of at least 44px, and the same bottom-to-top hover fill as the site's other buttons.
+- Keep other floating controls (slideshow pause buttons, chat widgets) out of the bottom-right corner so nothing overlaps it.
+
+```html
+<a class="back-to-top" href="#top">
+    <span class="visually-hidden">Back to top</span>
+    <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20"><path d="M10 16V4m-5 5 5-5 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
+```
 
 ### Page-specific CSS
 - `styles.css` is the homepage. `about.css`, `contact.css` and the like hold only what is unique to that page.
 - Before adding a rule to a page file, check whether the pattern already exists or will repeat. If it will, put it in `global.css`.
 
 ### JavaScript
-- `global.js` holds the nav toggle, shared form handling, reveal animations and footer year.
+- `global.js` holds the nav toggle, shared form handling, reveal animations, the back-to-top button and footer year.
 - `script.js` and page files hold only that page's behavior.
 - Never duplicate a function across page files.
 - Load every script with `defer` at the end of `<head>` or the bottom of `<body>`.
@@ -559,6 +575,7 @@ MigsFlow builds the front end. Forms get sent to an outside service, so there is
 - [ ] Mobile-first CSS, with no horizontal scroll from 320px to 1920px.
 - [ ] Clean folder URLs with trailing slashes, and all relative links working.
 - [ ] No console errors, no `console.log`, no placeholder text.
+- [ ] Back-to-top button on every page, bottom-right, appearing on scroll.
 
 **Assets**
 - [ ] WebP with `-m` crops, explicit dimensions, `decoding="async"`, lazy-loading only below the fold, and a preloaded hero.

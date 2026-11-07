@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none">
+  <!-- Faint map latitude lines -->
+  <g stroke="#6a1a3a" stroke-opacity=".06" stroke-width="1.5" stroke-dasharray="1 9" stroke-linecap="round">
+    <path d="M0 180c360-40 1080-40 1440 0M0 360c360-30 1080-30 1440 0M0 540c360 30 1080 30 1440 0M0 720c360 40 1080 40 1440 0"/>
+  </g>
+  <!-- Palm fronds, top left -->
+  <g fill="#6a1a3a" fill-opacity=".07">
+    <path d="M-40 40c120 10 220 60 300 150-110-40-210-60-320-60z"/>
+    <path d="M-30 120c100 40 180 110 230 210-90-70-170-110-260-140z"/>
+    <path d="M10 -40c80 70 130 160 150 270-50-90-110-160-190-220z"/>
+    <path d="M-60 210c80 60 130 140 150 240-60-80-120-130-200-170z"/>
+  </g>
+  <!-- Palm fronds, bottom right -->
+  <g fill="#b8461b" fill-opacity=".07">
+    <path d="M1500 860c-120-10-220-60-300-150 110 40 210 60 320 60z"/>
+    <path d="M1490 780c-100-40-180-110-230-210 90 70 170 110 260 140z"/>
+    <path d="M1450 940c-80-70-130-160-150-270 50 90 110 160 190 220z"/>
+  </g>
+  <!-- Compass rose, top right -->
+  <g transform="translate(1260 150)" stroke="#6a1a3a" stroke-opacity=".12" stroke-width="1.5">
+    <circle r="78"/>
+    <circle r="64" stroke-dasharray="2 6"/>
+    <path d="M0-96 10-10 0 0-10-10zM0 96 10 10 0 0-10 10zM-96 0-10-10 0 0-10 10zM96 0 10-10 0 0 10 10z" fill="#e3a23b" fill-opacity=".18"/>
+    <path d="M-50-50 0 0M50-50 0 0M-50 50 0 0M50 50 0 0"/>
+  </g>
+  <g fill="#6a1a3a" fill-opacity=".14" font-family="Georgia, serif" font-size="18" text-anchor="middle">
+    <text x="1260" y="40">N</text>
+  </g>
+  <!-- Postmark, bottom left -->
+  <g transform="translate(150 760)" stroke="#6a1a3a" stroke-opacity=".1" stroke-width="2">
+    <circle r="56"/>
+    <circle r="44" stroke-dasharray="3 5"/>
+    <path d="M70-18c25-12 50-12 75 0s50 12 75 0M70 0c25-12 50-12 75 0s50 12 75 0M70 18c25-12 50-12 75 0s50 12 75 0" stroke-linecap="round"/>
+  </g>
+  <!-- Scattered dots -->
+  <g fill="#e3a23b" fill-opacity=".4">
+    <circle cx="420" cy="90" r="3"/><circle cx="460" cy="120" r="2"/><circle cx="980" cy="820" r="3"/><circle cx="1030" cy="790" r="2"/><circle cx="760" cy="60" r="2.5"/>
+  </g>
+</svg>
