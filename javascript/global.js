@@ -268,7 +268,11 @@
 (function () {
     "use strict";
 
-    if (typeof Lenis === "undefined" || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    // Mouse and trackpad only: touch scrolling is native anyway, and
+    // skipping Lenis there saves phones a constant animation loop
+    if (typeof Lenis === "undefined" ||
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+        !window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
         return;
     }
 
